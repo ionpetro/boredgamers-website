@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
+    <main className={styles.wrapper}>
 
       <nav className={styles.navbar}>
         <Image src="/images/red-line.png" width={280} height={30} />
@@ -81,11 +81,57 @@ export default function Home() {
       </section>
 
       {/* ESHOP */}
-      <section>eshop</section>
+      <section className={styles.eshop}>
+
+        <Image src="/images/rec.png" width={700} height={700} className={styles.rectRight} />
+        <Image src="/images/rec.png" width={700} height={700} className={styles.rectLeft} />
+        <div className={styles.eshopHead}>
+          <Image src="/images/grey-man.png" width={100} height={100} className={styles.eshopImage} />
+          <hr />
+          <h2>Merch</h2>
+        </div>
+        <div className={styles.products}>
+          <div className={styles.product}>
+            <Image src="/images/product.png" width={380} height={380} />
+            <h3>Kappa Keepo</h3>
+            <a className={styles.button}>BUY NOW</a>
+          </div>
+          <div className={styles.product}>
+            <Image src="/images/product.png" width={380} height={380} />
+            <h3>Kappa Keepo</h3>
+            <a className={styles.button}>BUY NOW</a>
+          </div>
+          <div className={styles.product}>
+            <Image src="/images/product.png" width={380} height={380} />
+            <h3>Kappa Keepo</h3>
+            <a className={styles.button}>BUY NOW</a>
+          </div>
+        </div>
+      </section>
+
 
 
       {/* SPONSORS */}
-      <section>SPONSORS</section>
+      <section className={styles.sponsorsWrapper}>
+        <div className={styles.sponsors}>
+          <div className={styles.sponsorsHead}>
+            <h2>Sponsors</h2>
+            <hr />
+            <Image src="/images/grey-man.png" width={100} height={100} className={styles.eshopImage} />
+          </div>
+          <div className={styles.sponsorsMain}>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CcICbmnnsSw?si=aowO4OB3pQZLUfc1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9vJMNwCiBls?si=6_t-cTSml-df3R1P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/V6ZRnmGUE9g?si=f_Pzm6jnKr3DyGNL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FvKu0culHjw?si=DURKMsR4oWjA4HOO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+
+      </section>
 
 
       {/* TEAM */}
