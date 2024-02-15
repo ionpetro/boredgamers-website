@@ -170,7 +170,20 @@ export default function Home() {
       </section>
 
       {/* NEWSLETTER */}
-      <section>NEWSLETTER</section>
+      <section className={styles.newsletter}>
+        <div className={styles.newsletterLeft}>
+          <div>
+            Do you wanna become <br /> <span>BOURDELO?</span>
+          </div>
+        </div>
+        <div className={styles.newsletterRight}>
+          <input />
+          <a className={styles.button}>SUBMIT</a>
+        </div>
+      </section>
+
+      <footer className={styles.footer}><Image src="/images/logo.png" width={80} height={80} />
+        <div>Developed in love by ionpetro</div></footer>
     </main>
   );
 }
