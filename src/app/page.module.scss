@@ -17,7 +17,7 @@
 
 .main {
     margin: 80px 0;
-    padding: 120px 0;
+    padding: 80px 0;
     color: white;
     display: flex;
     align-items: center;
@@ -123,7 +123,6 @@
 
 .eshopImage {
     margin-top: -64px;
-    transform: rotate(-24deg);
 }
 
 
@@ -234,4 +233,47 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
+}
+
+.team {
+    position: relative;
+    padding: 64px 0;
+    width: 1200px;
+    margin: auto;
+}
+
+.teamHead {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 64px;
+
+
+    hr {
+        border-top: 3px solid white;
+        width: 100%;
+        margin-right: 64px;
+    }
+
+    img {
+        position: absolute;
+        top: 80px;
+        left: 0;
+    }
+}
+
+.teamMain {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    &>div {
+        font-family: 'Gagalin';
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-top: -24px;
+    }
 }

@@ -86,7 +86,7 @@ export default function Home() {
         <Image src="/images/rec.png" width={700} height={700} className={styles.rectRight} />
         <Image src="/images/rec.png" width={700} height={700} className={styles.rectLeft} />
         <div className={styles.eshopHead}>
-          <Image src="/images/grey-man.png" width={100} height={100} className={styles.eshopImage} />
+          <Image src="/images/yellow-man.png" width={100} height={100} className={styles.eshopImage} />
           <hr />
           <h2>Merch</h2>
         </div>
@@ -135,7 +135,39 @@ export default function Home() {
 
 
       {/* TEAM */}
-      <section>TEAM</section>
+      <section className={styles.team}>
+        <div className={styles.teamHead}>
+          <Image src="/images/yellow-man.png" width={100} height={100} className={styles.eshopImage} />
+          <hr />
+          <h2>Team</h2>
+        </div>
+        <div className={styles.teamMain}>
+          <div>
+            <Image src="/images/image00003.png" width={220} height={300} />
+            <p>@01001101_K</p>
+          </div>
+          <div>
+            <Image src="/images/image00002.png" width={220} height={300} />
+            <p>@JOHNBOURSI</p>
+          </div>
+          <div>
+            <Image src="/images/image00001.png" width={220} height={300} />
+            <p>@CS.SAKELLARIOU</p>
+          </div>
+          <div>
+            <Image src="/images/image00004.png" width={220} height={300} />
+            <p>@VIKINGBAE</p>
+          </div>
+          <div>
+            <Image src="/images/image00005.png" width={220} height={300} />
+            <p>@PARASKEVYO</p>
+          </div>
+          <div>
+            <Image src="/images/image00006.png" width={220} height={300} />
+            <p>@DKARAGOUNIS89</p>
+          </div>
+        </div>
+      </section>
 
       {/* NEWSLETTER */}
       <section>NEWSLETTER</section>
