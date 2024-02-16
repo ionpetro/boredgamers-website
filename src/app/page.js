@@ -1,4 +1,7 @@
+"use client"; // This is a client component 👈🏽
+
 import styles from "./page.module.scss";
+import Hero from '../components/Hero/Hero'
 import Image from "next/image";
 
 export default function Home() {
@@ -7,7 +10,7 @@ export default function Home() {
 
       <nav className={styles.navbar}>
         <Image src="/images/red-line.png" width={280} height={30} />
-        <Image src="/images/logo.png" width={100} height={100} />
+        <Image src="/images/logo.png" width={80} height={60} />
         <Image src="/images/yellow-line.png" width={280} height={30} />
       </nav>
 
@@ -46,18 +49,13 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.right}>
-          <Image
-            src="/images/hero.png"
-            width={500}
-            height={500}
-            alt="Picture of the author"
-          />
+          <Hero />
         </div>
       </section>
 
       {/* DESCRIPTION */}
       <section className={styles.description}>
-        <Image src="/images/grey-man.png" width={350} height={350} />
+        <Image src="/images/grey-man.png" width={250} height={250} />
         <div className={styles.descriptionContent}>
           <h3>ειμαστε οι BoredGamers... Θα μας βρειτε να λeμε παραξενες ιστορiες, να τσακωνομαστε,
             να ταξιδευουμε και να επικοινωνουμε με ομορφο τροπο πραγματα που μας ενοχλουν...</h3>
@@ -77,11 +75,11 @@ export default function Home() {
 
           </div>
         </div>
-        <Image src="/images/yellow-man.png" width={350} height={350} />
+        <Image src="/images/yellow-man.png" width={250} height={250} />
       </section>
 
       {/* ESHOP */}
-      <section className={styles.eshop}>
+      <section className={styles.eshop} id="merch">
 
         <Image src="/images/rec.png" width={700} height={700} className={styles.rectRight} />
         <Image src="/images/rec.png" width={700} height={700} className={styles.rectLeft} />
@@ -112,7 +110,7 @@ export default function Home() {
 
 
       {/* SPONSORS */}
-      <section className={styles.sponsorsWrapper}>
+      <section className={styles.sponsorsWrapper} id="sponsors">
         <div className={styles.sponsors}>
           <div className={styles.sponsorsHead}>
             <h2>Sponsors</h2>
@@ -121,13 +119,13 @@ export default function Home() {
           </div>
           <div className={styles.sponsorsMain}>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/CcICbmnnsSw?si=aowO4OB3pQZLUfc1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/CcICbmnnsSw?si=aowO4OB3pQZLUfc1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/9vJMNwCiBls?si=6_t-cTSml-df3R1P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/9vJMNwCiBls?si=6_t-cTSml-df3R1P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/V6ZRnmGUE9g?si=f_Pzm6jnKr3DyGNL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/V6ZRnmGUE9g?si=f_Pzm6jnKr3DyGNL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/FvKu0culHjw?si=DURKMsR4oWjA4HOO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/FvKu0culHjw?si=DURKMsR4oWjA4HOO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
 
@@ -182,8 +180,11 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className={styles.footer}><Image src="/images/logo.png" width={80} height={80} />
-        <div>Developed in love by ionpetro</div></footer>
+      <footer className={styles.footer}>
+        <Image src="/images/logo.png" width={30} height={20} />
+        <small>Developed with love by <a href="https://www.instagram.com/ionpetro/" target="_blank"><em>ionpetro</em></a>
+        </small>
+      </footer>
     </main>
   );
 }

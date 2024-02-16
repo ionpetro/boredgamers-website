@@ -16,7 +16,6 @@
 }
 
 .main {
-    // margin: 80px 0;
     padding: 60px 0;
     color: white;
     display: flex;
@@ -28,11 +27,11 @@
     }
 
     .left {
-        padding-right: 24px;
+        padding-right: 48px;
     }
 
     .right {
-        padding-left: 24px;
+        padding-left: 48px;
     }
 }
 
@@ -47,8 +46,6 @@
     div {
         margin-right: 12px;
     }
-
-
 
 }
 
@@ -142,6 +139,7 @@
         position: absolute;
         top: 80px;
         left: 0;
+        animation: infirotate 5s ease-in-out infinite;
     }
 }
 
@@ -226,13 +224,24 @@
         position: absolute;
         top: 80px;
         right: 0;
+        animation: infirotate2 5s ease-in-out infinite;
     }
 }
 
 .sponsorsMain {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    row-gap: 0px;
+    column-gap: 0px;
+    margin: auto;
+    width: 920px;
+
+    iframe {
+        width: 100%;
+        height: 280px;
+        border: 5px solid black;
+
+    }
 }
 
 .team {
@@ -260,6 +269,7 @@
         position: absolute;
         top: 80px;
         left: 0;
+        animation: infirotate 5s ease-in-out infinite;
     }
 }
 
@@ -328,4 +338,51 @@
     justify-content: space-between;
     width: 80%;
     padding: 12px 24px;
+
+    small {
+        font-size: .5em;
+    }
+
+    a {
+        cursor: pointer;
+        color: $yellow;
+        text-decoration: dashed;
+    }
+}
+
+
+@keyframes infirotate {
+    0% {
+
+        transform: rotate(0deg);
+    }
+
+    50% {
+
+        transform: rotate(80deg);
+    }
+
+    100% {
+
+        transform: rotate(0deg);
+    }
+}
+
+
+
+@keyframes infirotate2 {
+    0% {
+
+        transform: rotate(-60deg);
+    }
+
+    50% {
+
+        transform: rotate(20deg);
+    }
+
+    100% {
+
+        transform: rotate(-60deg);
+    }
 }
