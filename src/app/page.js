@@ -118,14 +118,30 @@ export default function Home() {
             <Image src="/images/grey-man.png" width={100} height={100} className={styles.eshopImage} />
           </div>
           <div className={styles.sponsorsMain}>
-
-            <iframe src="https://www.youtube.com/embed/CcICbmnnsSw?si=aowO4OB3pQZLUfc1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-            <iframe src="https://www.youtube.com/embed/9vJMNwCiBls?si=6_t-cTSml-df3R1P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-            <iframe src="https://www.youtube.com/embed/V6ZRnmGUE9g?si=f_Pzm6jnKr3DyGNL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-            <iframe src="https://www.youtube.com/embed/FvKu0culHjw?si=DURKMsR4oWjA4HOO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div className={styles.sponsor}>
+              <Image src="/images/efood.png" width={80} height={80} />
+              <div className={styles.video}>
+                <iframe src="https://www.youtube.com/embed/CcICbmnnsSw?si=aowO4OB3pQZLUfc1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div className={styles.sponsor}>
+              <Image src="/images/hasbro.png" width={100} height={100} />
+              <div className={styles.video}>
+                <iframe src="https://www.youtube.com/embed/9vJMNwCiBls?si=6_t-cTSml-df3R1P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div className={styles.sponsor}>
+              <Image src="/images/psixogios.png" width={80} height={80} />
+              <div className={styles.video}>
+                <iframe src="https://www.youtube.com/embed/V6ZRnmGUE9g?si=f_Pzm6jnKr3DyGNL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div className={styles.sponsor}>
+              <Image src="/images/fridays.png" width={120} height={50} />
+              <div className={styles.video}>
+                <iframe src="https://www.youtube.com/embed/FvKu0culHjw?si=DURKMsR4oWjA4HOO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
         </div>
 
