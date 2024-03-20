@@ -17,13 +17,13 @@ body {
 h1,
 h2,
 h3 {
-    font-family: 'Gagalin';
-    font-weight: lighter;
+    font-family: 'Averia Sans Libre';
+    font-weight: 700;
 }
 
 h1 {
     font-size: 3em;
-    font-weight: 100;
+    font-weight: 900;
 }
 
 h2 {

@@ -56,7 +56,7 @@ export default function Home() {
       <section className={styles.description}>
         <Image src="/images/grey-man.png" width={250} height={250} />
         <div className={styles.descriptionContent}>
-          <h3>we are the <em>BoredGamers</em>.<br /> You will find us telling strange stories, arguing, traveling and communicating in a beautiful way things that bother us...</h3>
+          <h3>We are the <em>BoredGamers</em>.<br /><br /> You will find us telling strange stories, arguing, traveling and communicating in a beautiful way things that bother us...</h3>
           <div className={styles.numberWrapper}>
             <div className={styles.number}>
               <Image src="/images/yt.svg" width={32} height={32} />
