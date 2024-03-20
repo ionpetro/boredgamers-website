@@ -30,3 +30,16 @@ h2 {
     font-size: 2em;
     font-weight: 100;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        font-weight: 100;
+    }
+
+    h2 {
+        font-size: 1em;
+        font-weight: 100;
+    }
+
+}

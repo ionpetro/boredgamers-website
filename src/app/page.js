@@ -19,7 +19,6 @@ export default function Home() {
         <div className={styles.left}>
           <span>Welcome to the</span>
           <h1>BORED GAMERS</h1>
-          <span className={styles.rightText}>Official website</span>
           <div className={styles.social}>
             <div className={styles.socialIcon}>
               <a href="https://www.instagram.com/boredgamersofficial/?hl=en" target="_blank">
@@ -57,8 +56,7 @@ export default function Home() {
       <section className={styles.description}>
         <Image src="/images/grey-man.png" width={250} height={250} />
         <div className={styles.descriptionContent}>
-          <h3>ειμαστε οι BoredGamers... Θα μας βρειτε να λeμε παραξενες ιστορiες, να τσακωνομαστε,
-            να ταξιδευουμε και να επικοινωνουμε με ομορφο τροπο πραγματα που μας ενοχλουν...</h3>
+          <h3>we are the <em>BoredGamers</em>.<br /> You will find us telling strange stories, arguing, traveling and communicating in a beautiful way things that bother us...</h3>
           <div className={styles.numberWrapper}>
             <div className={styles.number}>
               <Image src="/images/yt.svg" width={32} height={32} />
@@ -91,18 +89,13 @@ export default function Home() {
         <div className={styles.products}>
           <div className={styles.product}>
             <Image src="/images/product.png" width={380} height={380} />
-            <h3>Kappa Keepo</h3>
-            <a className={styles.button}>BUY NOW</a>
+            <h3>BOREDGAMERS T-SHIRT</h3>
+            <a className={`${styles.button} ${styles.disabled}`}>SOLD OUT</a>
           </div>
           <div className={styles.product}>
-            <Image src="/images/product.png" width={380} height={380} />
-            <h3>Kappa Keepo</h3>
-            <a className={styles.button}>BUY NOW</a>
-          </div>
-          <div className={styles.product}>
-            <Image src="/images/product.png" width={380} height={380} />
-            <h3>Kappa Keepo</h3>
-            <a className={styles.button}>BUY NOW</a>
+            <Image src="/images/COMINGSOON.png" width={380} height={380} />
+            <h3>BOREDGAMERS SOCKS</h3>
+            <a className={`${styles.button} ${styles.disabled}`}>COMING SOON</a>
           </div>
         </div>
       </section>
@@ -191,7 +184,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.newsletterRight}>
-          <input />
+          <input placeholder="email" />
           <a className={styles.button}>SUBMIT</a>
         </div>
       </section>
