@@ -15,10 +15,16 @@
     align-items: center;
 
     @media (max-width: $breakpoint-mobile) {
-        width: unset;
+        padding: 16px;
+        width: 100%;
 
         &> :nth-child(1) {
+
             transform: scale(.5);
+        }
+
+        &> :nth-child(2) {
+            transform: scale(.7);
         }
 
         &> :nth-child(3) {
@@ -115,6 +121,9 @@
 
     @media (max-width: $breakpoint-mobile) {
         display: block;
+        max-width: unset;
+
+        // width: 100%;
         width: 100vw;
         padding: 0px 0;
 
@@ -166,7 +175,7 @@
 
     @media (max-width: $breakpoint-mobile) {
         background-color: $red;
-        width: 100%;
+        width: 100vw !important;
     }
 }
 
@@ -426,6 +435,10 @@
     width: 1200px;
     margin: auto;
     margin-bottom: 88px;
+
+    @media (max-width: $breakpoint-mobile) {
+        width: unset;
+    }
 }
 
 .teamHead {
@@ -501,7 +514,7 @@
     grid-template-columns: 1fr 1fr;
 
     @media (max-width: $breakpoint-mobile) {
-
+        width: 100vw !important;
         grid-template-columns: 1fr;
     }
 
@@ -556,9 +569,11 @@
 
 
     @media (max-width: $breakpoint-mobile) {
+        padding: 24px;
         flex-direction: column;
 
-        a {
+        a,
+        input {
             margin-top: 24px;
         }
     }
@@ -579,6 +594,12 @@
         cursor: pointer;
         color: $yellow;
         text-decoration: dashed;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        width: 100vw;
+        padding: 8px;
+        flex-direction: column;
     }
 }
 
