@@ -252,7 +252,17 @@
             height: 200px;
 
         }
+
+
     }
+
+    @media (max-width: $breakpoint-mobile) {
+
+        &:nth-child(2) {
+            margin-top: 48px;
+        }
+    }
+
 
 }
 
@@ -301,6 +311,10 @@
     padding: 64px 0;
     width: 100vw;
     background-color: $yellow;
+
+    @media (max-width: $breakpoint-mobile) {
+        padding: 32px 0;
+    }
 }
 
 .sponsors {
@@ -308,6 +322,11 @@
     padding: 64px 0;
     max-width: 1200px;
     margin: auto;
+
+    @media (max-width: $breakpoint-mobile) {
+        padding: 32px;
+        width: unset;
+    }
 }
 
 .sponsorsHead {
@@ -336,6 +355,30 @@
         right: 0;
         animation: infirotate2 5s ease-in-out infinite;
     }
+
+
+    @media (max-width: $breakpoint-mobile) {
+        margin: auto;
+        width: fit-content;
+        margin-bottom: 48px;
+
+        hr {
+            margin-left: 20px;
+            width: 100px;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        img {
+            top: 90px;
+            width: 80px;
+            height: 80px;
+        }
+
+    }
+
 }
 
 .sponsorsMain {
@@ -347,7 +390,14 @@
         width: 100%;
         height: 280px;
         border: 5px solid black;
+    }
 
+    @media (max-width: $breakpoint-mobile) {
+        width: unset;
+
+        iframe {
+            margin-bottom: 24px;
+        }
     }
 }
 
@@ -401,11 +451,38 @@
         left: 0;
         animation: infirotate 5s ease-in-out infinite;
     }
+
+
+    @media (max-width: $breakpoint-mobile) {
+        margin: auto;
+        width: fit-content;
+
+        hr {
+            margin-right: 28px;
+            width: 150px;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        img {
+            top: 90px;
+            width: 80px;
+            height: 80px;
+        }
+
+    }
 }
 
 .teamMain {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    @media (max-width: $breakpoint-mobile) {
+        grid-template-columns: 1fr;
+
+    }
 
     &>div {
         font-family: 'Gagalin';
@@ -422,6 +499,12 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: $breakpoint-mobile) {
+
+        grid-template-columns: 1fr;
+    }
+
     gap: 0;
 }
 
@@ -429,7 +512,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 48px;
+    padding: 24px;
     color: black;
     background-color: $yellow;
     border: 2px solid black;
@@ -439,6 +522,14 @@
     span {
         font-size: 2.1em;
         line-height: 0.6;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: 1.2em;
+
+        span {
+            font-size: 2em;
+        }
     }
 
 }
@@ -459,7 +550,17 @@
         border-radius: 24px;
         margin-right: 12px;
         color: white;
-        font-size: 1em;
+        font-size: .9em;
+
+    }
+
+
+    @media (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+
+        a {
+            margin-top: 24px;
+        }
     }
 }
 
