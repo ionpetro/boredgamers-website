@@ -11,24 +11,24 @@
     padding: 32px;
     width: 1200px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-around;
+
 
     @media (max-width: $breakpoint-mobile) {
-        padding: 16px;
-        width: 100%;
+        padding: 0;
+        width: 100vw;
 
         &> :nth-child(1) {
-
-            transform: scale(.5);
+            transform: scale(.45);
         }
 
         &> :nth-child(2) {
-            transform: scale(.7);
+            transform: scale(.6);
         }
 
         &> :nth-child(3) {
-            transform: scale(.5);
+            transform: scale(.45);
         }
     }
 }
@@ -49,6 +49,8 @@
     }
 
     .right {
+        display: flex;
+        justify-content: center;
         padding-left: 48px;
     }
 
@@ -56,6 +58,7 @@
         display: block;
         padding: unset;
         padding-top: 60px;
+        width: 100vw;
 
         .left {
             margin: auto;
@@ -65,7 +68,7 @@
 
         .right {
             padding-left: 0;
-            transform: scale(.8);
+            transform: scale(.7);
         }
 
     }
@@ -122,17 +125,15 @@
     @media (max-width: $breakpoint-mobile) {
         display: block;
         max-width: unset;
-
-        // width: 100%;
         width: 100vw;
         padding: 0px 0;
 
         &>:nth-child(1) {
-            transform: scale(.7) translate(-200px, 50px);
+            transform: scale(.6) translate(-140px, 50px);
         }
 
         &>:nth-child(3) {
-            transform: scale(.7) translate(200px);
+            transform: scale(.6) translate(140px, 50px);
         }
 
     }
@@ -154,7 +155,6 @@
     padding: 12px;
 
     span {
-        font-family: 'Baloo 2';
         font-size: 1em;
         font-weight: 100;
         margin-left: 12px;
@@ -190,6 +190,10 @@
     position: relative;
     align-items: center;
     justify-content: center;
+
+    h2 {
+        font-weight: 800;
+    }
 
     hr {
         display: block;
@@ -346,6 +350,7 @@
     margin-bottom: 64px;
 
     h2 {
+        font-weight: 800;
         color: black;
 
     }
@@ -448,6 +453,10 @@
     justify-content: center;
     margin: 64px;
 
+    h2 {
+        font-weight: 800;
+    }
+
 
     hr {
         display: block;
@@ -498,7 +507,6 @@
     }
 
     &>div {
-        font-family: 'Baloo 2';
         text-align: center;
         margin-bottom: 24px;
     }
@@ -529,19 +537,18 @@
     color: black;
     background-color: $yellow;
     border: 2px solid black;
-    font-family: 'Averia Sans Libre';
-    font-size: 2em;
 
     span {
         font-size: 1.8em;
-        line-height: 0.8;
+        font-weight: 700;
+
     }
 
     @media (max-width: $breakpoint-mobile) {
-        font-size: 1.2em;
+        // font-size: 1.2em;
 
         span {
-            font-size: 2em;
+            // font-size: 2em;
         }
     }
 
@@ -564,7 +571,6 @@
         margin-right: 12px;
         color: white;
         font-size: .9em;
-
     }
 
 
@@ -598,9 +604,14 @@
 
     @media (max-width: $breakpoint-mobile) {
         width: 100vw;
-        padding: 8px;
+        padding: 8px 0;
         flex-direction: column;
     }
+}
+
+.rights {
+    margin-top: 4px;
+    color: gray;
 }
 
 

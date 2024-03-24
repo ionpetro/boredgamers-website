@@ -3,6 +3,16 @@
 import styles from "./page.module.scss";
 import Hero from '../components/Hero/Hero'
 import Image from "next/image";
+// import Lenis from '@studio-freight/lenis'
+
+// const lenis = new Lenis()
+
+// function raf(time) {
+//   lenis.raf(time)
+//   requestAnimationFrame(raf)
+// }
+
+// requestAnimationFrame(raf)
 
 export default function Home() {
   return (
@@ -79,8 +89,8 @@ export default function Home() {
       {/* ESHOP */}
       <section className={styles.eshop} id="merch">
 
-        <Image src="/images/rec.png" width={700} height={700} className={styles.rectRight} />
-        <Image src="/images/rec.png" width={700} height={700} className={styles.rectLeft} />
+        {/* <Image src="/images/rec.png" width={700} height={700} className={styles.rectRight} /> */}
+        {/* <Image src="/images/rec.png" width={700} height={700} className={styles.rectLeft} /> */}
         <div className={styles.eshopHead}>
           <Image src="/images/yellow-man.png" width={100} height={100} className={styles.eshopImage} />
           <hr />
@@ -190,9 +200,9 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        <Image src="/images/logo.png" width={30} height={20} />
-        <small>Developed with love by <a href="https://www.instagram.com/ionpetro/" target="_blank"><em>ionpetro</em></a>
+        <small>Developed with ❤️ by <a href="https://www.instagram.com/ionpetro/" target="_blank"><em>ionpetro</em></a>
         </small>
+        <small className={styles.rights}>© boredgamers.com, Inc. All rights reserved.</small>
       </footer>
     </main>
   );
