@@ -1,45 +1,41 @@
 html,
 body {
-    background-color: black;
-    font-family: "Montserrat", sans-serif;
-    color: white;
-    display: flex;
-    overflow-x: hidden;
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  display: flex;
+  overflow-x: hidden;
 
-    align-items: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    scroll-behavior: smooth;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  scroll-behavior: smooth;
 }
 
 h1,
 h2,
 h3 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 h1 {
-    font-size: 3em;
-    font-weight: 900;
+  font-size: 3em;
+  font-weight: 900;
 }
 
 h2 {
-    font-size: 2em;
-
+  font-size: 2em;
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 1.6em;
+  h1 {
+    font-size: 1.6em;
+  }
 
-    }
-
-    h2 {
-        font-size: 1em;
-
-    }
-
+  h2 {
+    font-size: 1em;
+  }
 }

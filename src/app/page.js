@@ -1,7 +1,7 @@
 "use client"; // This is a client component 👈🏽
 
 import styles from "./page.module.scss";
-import Hero from '../components/Hero/Hero'
+import Hero from "../components/Hero/Hero";
 import Image from "next/image";
 // import Lenis from '@studio-freight/lenis'
 
@@ -17,7 +17,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className={styles.wrapper}>
-
       <nav className={styles.navbar}>
         <Image src="/images/red-line.png" width={280} height={30} />
         <Image src="/images/logo.png" width={80} height={60} />
@@ -31,27 +30,42 @@ export default function Home() {
           <h1>BORED GAMERS</h1>
           <div className={styles.social}>
             <div className={styles.socialIcon}>
-              <a href="https://www.instagram.com/boredgamersofficial/?hl=en" target="_blank">
+              <a
+                href="https://www.instagram.com/boredgamersofficial/?hl=en"
+                target="_blank"
+              >
                 <Image src="/images/insta.svg" width={32} height={32} />
               </a>
             </div>
             <div className={styles.socialIcon}>
-              <a href="https://www.youtube.com/@BoredGamersOfficial" target="_blank">
+              <a
+                href="https://www.youtube.com/@BoredGamersOfficial"
+                target="_blank"
+              >
                 <Image src="/images/yt.svg" width={32} height={32} />
               </a>
             </div>
             <div className={styles.socialIcon}>
-              <a href="https://www.tiktok.com/@boredgamersofficial" target="_blank">
+              <a
+                href="https://www.tiktok.com/@boredgamersofficial"
+                target="_blank"
+              >
                 <Image src="/images/tt.svg" width={32} height={32} />
               </a>
             </div>
             <div className={styles.socialIcon}>
-              <a href="https://open.spotify.com/show/46dNeISTE55Mv4TECIctam" target="_blank">
+              <a
+                href="https://open.spotify.com/show/46dNeISTE55Mv4TECIctam"
+                target="_blank"
+              >
                 <Image src="/images/sp.svg" width={32} height={32} />
               </a>
             </div>
             <div className={styles.socialIcon}>
-              <a href="https://www.facebook.com/YouUp.BoredGamers/" target="_blank">
+              <a
+                href="https://www.facebook.com/YouUp.BoredGamers/"
+                target="_blank"
+              >
                 <Image src="/images/fb.svg" width={32} height={32} />
               </a>
             </div>
@@ -66,7 +80,11 @@ export default function Home() {
       <section className={styles.description}>
         <Image src="/images/grey-man.png" width={250} height={250} />
         <div className={styles.descriptionContent}>
-          <h3>We are the <em>BoredGamers</em>.<br /><br /> You will find us telling strange stories, arguing, traveling and communicating in a beautiful way things that bother us...</h3>
+          <h3>
+            We are the <em>BoredGamers</em>.<br />
+            <br /> You will find us telling strange stories, arguing, traveling
+            and communicating in a beautiful way things that bother us...
+          </h3>
           <div className={styles.numberWrapper}>
             <div className={styles.number}>
               <Image src="/images/yt.svg" width={32} height={32} />
@@ -80,7 +98,6 @@ export default function Home() {
               <Image src="/images/tt.svg" width={32} height={32} />
               <span>60.4k</span>
             </div>
-
           </div>
         </div>
         <Image src="/images/yellow-man.png" width={250} height={250} />
@@ -88,11 +105,15 @@ export default function Home() {
 
       {/* ESHOP */}
       <section className={styles.eshop} id="merch">
-
         {/* <Image src="/images/rec.png" width={700} height={700} className={styles.rectRight} /> */}
         {/* <Image src="/images/rec.png" width={700} height={700} className={styles.rectLeft} /> */}
         <div className={styles.eshopHead}>
-          <Image src="/images/yellow-man.png" width={100} height={100} className={styles.eshopImage} />
+          <Image
+            src="/images/yellow-man.png"
+            width={100}
+            height={100}
+            className={styles.eshopImage}
+          />
           <hr />
           <h2>Merch</h2>
         </div>
@@ -110,51 +131,81 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* SPONSORS */}
       <section className={styles.sponsorsWrapper} id="sponsors">
         <div className={styles.sponsors}>
           <div className={styles.sponsorsHead}>
             <h2>Sponsors</h2>
             <hr />
-            <Image src="/images/grey-man.png" width={100} height={100} className={styles.eshopImage} />
+            <Image
+              src="/images/grey-man.png"
+              width={100}
+              height={100}
+              className={styles.eshopImage}
+            />
           </div>
           <div className={styles.sponsorsMain}>
             <div className={styles.sponsor}>
               <Image src="/images/efood.png" width={80} height={80} />
               <div className={styles.video}>
-                <iframe src="https://www.youtube.com/embed/CcICbmnnsSw?si=aowO4OB3pQZLUfc1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe
+                  src="https://www.youtube.com/embed/CcICbmnnsSw?si=aowO4OB3pQZLUfc1"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
             <div className={styles.sponsor}>
               <Image src="/images/hasbro.png" width={100} height={100} />
               <div className={styles.video}>
-                <iframe src="https://www.youtube.com/embed/9vJMNwCiBls?si=6_t-cTSml-df3R1P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe
+                  src="https://www.youtube.com/embed/9vJMNwCiBls?si=6_t-cTSml-df3R1P"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
             <div className={styles.sponsor}>
               <Image src="/images/psixogios.png" width={80} height={80} />
               <div className={styles.video}>
-                <iframe src="https://www.youtube.com/embed/V6ZRnmGUE9g?si=f_Pzm6jnKr3DyGNL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe
+                  src="https://www.youtube.com/embed/V6ZRnmGUE9g?si=f_Pzm6jnKr3DyGNL"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
             <div className={styles.sponsor}>
               <Image src="/images/fridays.png" width={120} height={50} />
               <div className={styles.video}>
-                <iframe src="https://www.youtube.com/embed/FvKu0culHjw?si=DURKMsR4oWjA4HOO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe
+                  src="https://www.youtube.com/embed/FvKu0culHjw?si=DURKMsR4oWjA4HOO"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
         </div>
-
       </section>
-
 
       {/* TEAM */}
       <section className={styles.team}>
         <div className={styles.teamHead}>
-          <Image src="/images/yellow-man.png" width={100} height={100} className={styles.eshopImage} />
+          <Image
+            src="/images/yellow-man.png"
+            width={100}
+            height={100}
+            className={styles.eshopImage}
+          />
           <hr />
           <h2>Team</h2>
         </div>
@@ -200,9 +251,15 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        <small>Developed with ❤️ by <a href="https://www.instagram.com/ionpetro/" target="_blank"><em>ionpetro</em></a>
+        <small>
+          Developed with ❤️ by{" "}
+          <a href="https://www.instagram.com/ionpetro/" target="_blank">
+            <em>ionpetro</em>
+          </a>
         </small>
-        <small className={styles.rights}>© boredgamers.com, Inc. All rights reserved.</small>
+        <small className={styles.rights}>
+          © boredgamers.com, Inc. All rights reserved.
+        </small>
       </footer>
     </main>
   );
