@@ -3,16 +3,6 @@
 import styles from "./page.module.scss";
 import Hero from "../components/Hero/Hero";
 import Image from "next/image";
-// import Lenis from '@studio-freight/lenis'
-
-// const lenis = new Lenis()
-
-// function raf(time) {
-//   lenis.raf(time)
-//   requestAnimationFrame(raf)
-// }
-
-// requestAnimationFrame(raf)
 
 export default function Home() {
   return (
@@ -105,8 +95,6 @@ export default function Home() {
 
       {/* ESHOP */}
       <section className={styles.eshop} id="merch">
-        {/* <Image src="/images/rec.png" width={700} height={700} className={styles.rectRight} /> */}
-        {/* <Image src="/images/rec.png" width={700} height={700} className={styles.rectLeft} /> */}
         <div className={styles.eshopHead}>
           <Image
             src="/images/yellow-man.png"
@@ -151,7 +139,6 @@ export default function Home() {
                 <iframe
                   src="https://www.youtube.com/embed/CcICbmnnsSw?si=aowO4OB3pQZLUfc1"
                   title="YouTube video player"
-                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 ></iframe>
@@ -163,7 +150,6 @@ export default function Home() {
                 <iframe
                   src="https://www.youtube.com/embed/9vJMNwCiBls?si=6_t-cTSml-df3R1P"
                   title="YouTube video player"
-                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 ></iframe>
@@ -175,9 +161,8 @@ export default function Home() {
                 <iframe
                   src="https://www.youtube.com/embed/V6ZRnmGUE9g?si=f_Pzm6jnKr3DyGNL"
                   title="YouTube video player"
-                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
               </div>
             </div>
@@ -187,9 +172,8 @@ export default function Home() {
                 <iframe
                   src="https://www.youtube.com/embed/FvKu0culHjw?si=DURKMsR4oWjA4HOO"
                   title="YouTube video player"
-                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
               </div>
             </div>

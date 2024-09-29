@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Gagalin';
+  src: url('/fonts/Gagalin-Regular.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
   background-color: black;
@@ -17,13 +25,13 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: "Gagalin", sans-serif;
+  font-weight: 600;
 }
 
 h1 {
   font-size: 3em;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 h2 {
@@ -39,3 +47,4 @@ h2 {
     font-size: 1em;
   }
 }
+
