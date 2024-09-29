@@ -17,7 +17,7 @@ export default function Home() {
       <section className={styles.main}>
         <div className={styles.left}>
           <span>Welcome to the</span>
-          <h1>BORED GAMERS</h1>
+          <h1>BOREDGAMERS</h1>
           <div className={styles.social}>
             <div className={styles.socialIcon}>
               <a
@@ -67,54 +67,61 @@ export default function Home() {
       </section>
 
       {/* DESCRIPTION */}
-      <section className={styles.description}>
-        <Image src="/images/grey-man.png" width={250} height={250} />
-        <div className={styles.descriptionContent}>
-          <h3>
-            We are the <em>BoredGamers</em>.<br />
-            <br /> You will find us telling strange stories, arguing, traveling
-            and communicating in a beautiful way things that bother us...
-          </h3>
-          <div className={styles.numberWrapper}>
-            <div className={styles.number}>
-              <Image src="/images/yt.svg" width={32} height={32} />
-              <span>56.8k</span>
-            </div>
-            <div className={styles.number}>
-              <Image src="/images/insta.svg" width={32} height={32} />
-              <span>19.7k</span>
-            </div>
-            <div className={styles.number}>
-              <Image src="/images/tt.svg" width={32} height={32} />
-              <span>60.4k</span>
+      <div
+        className={styles.descriptionWrapper}
+        style={{
+          backgroundImage: "url('/images/background.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <img src="/images/paper.png" className={styles.paper} />
+
+        <section className={styles.description}>
+          <Image src="/images/grey-man.png" width={250} height={250} />
+          <div className={styles.descriptionContent}>
+            <h3>
+              ειμαστε οι BoredGamers... Θα μας βρειτε να λeμε παραξενες
+              ιστορiες, να τσακωνομαστε, να ταξιδευουμε και να επικοινωνουμε με
+              ομορφο τροπο πραγματα που μας ενοχλουν...
+            </h3>
+            <div className={styles.numberWrapper}>
+              <div className={styles.number}>
+                <Image src="/images/yt.svg" width={32} height={32} />
+                <span>56.8k</span>
+              </div>
+              <div className={styles.number}>
+                <Image src="/images/insta.svg" width={32} height={32} />
+                <span>19.7k</span>
+              </div>
+              <div className={styles.number}>
+                <Image src="/images/tt.svg" width={32} height={32} />
+                <span>60.4k</span>
+              </div>
             </div>
           </div>
-        </div>
-        <Image src="/images/yellow-man.png" width={250} height={250} />
-      </section>
+          <Image src="/images/yellow-man.png" width={250} height={250} />
+        </section>
+        <img src="/images/paper.png" className={styles.paperBottom} />
+      </div>
 
       {/* ESHOP */}
       <section className={styles.eshop} id="merch">
-        <div className={styles.eshopHead}>
-          <Image
-            src="/images/yellow-man.png"
-            width={100}
-            height={100}
-            className={styles.eshopImage}
-          />
-          <hr />
-          <h2>Merch</h2>
-        </div>
+        <h2 className={styles.eshopHead}>MERCH</h2>
+        <h3 className={styles.eshopSubhead}>
+          WANT TO LOOK COOL? CHECK THIS OUT 👇
+        </h3>
         <div className={styles.products}>
           <div className={styles.product}>
-            <Image src="/images/product.png" width={380} height={380} />
-            <h3>BOREDGAMERS T-SHIRT</h3>
-            <a className={`${styles.button} ${styles.disabled}`}>SOLD OUT</a>
+            <Image src="/images/socks.png" width={380} height={380} />
+            <h3>ΚΑΛΤΣΕΣ LIMITED</h3>
+            <a className={`${styles.button}`}>BUY NOW</a>
           </div>
           <div className={styles.product}>
-            <Image src="/images/COMINGSOON.png" width={380} height={380} />
-            <h3>BOREDGAMERS SOCKS</h3>
-            <a className={`${styles.button} ${styles.disabled}`}>COMING SOON</a>
+            <Image src="/images/product.png" width={380} height={380} />
+            <h3>CLUB T-SHIRT</h3>
+            <a className={`${styles.button} ${styles.disabled}`}>SOLD OUT</a>
           </div>
         </div>
       </section>
