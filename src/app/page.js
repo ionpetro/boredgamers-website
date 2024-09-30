@@ -3,16 +3,11 @@
 import styles from "./page.module.scss";
 import Hero from "../components/Hero/Hero";
 import Image from "next/image";
+import ParallaxText from "../components/ParallaxText/ParallaxText";
 
 export default function Home() {
   return (
     <main className={styles.wrapper}>
-      <nav className={styles.navbar}>
-        <Image src="/images/red-line.png" width={280} height={30} />
-        <Image src="/images/logo.png" width={80} height={60} />
-        <Image src="/images/yellow-line.png" width={280} height={30} />
-      </nav>
-
       {/* HERO */}
       <section className={styles.main}>
         <div className={styles.left}>
@@ -128,64 +123,16 @@ export default function Home() {
 
       {/* SPONSORS */}
       <section className={styles.sponsorsWrapper} id="sponsors">
-        <div className={styles.sponsors}>
-          <div className={styles.sponsorsHead}>
-            <h2>Sponsors</h2>
-            <hr />
-            <Image
-              src="/images/grey-man.png"
-              width={100}
-              height={100}
-              className={styles.eshopImage}
-            />
-          </div>
-          <div className={styles.sponsorsMain}>
-            <div className={styles.sponsor}>
-              <Image src="/images/efood.png" width={80} height={80} />
-              <div className={styles.video}>
-                <iframe
-                  src="https://www.youtube.com/embed/CcICbmnnsSw?si=aowO4OB3pQZLUfc1"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-            <div className={styles.sponsor}>
-              <Image src="/images/hasbro.png" width={100} height={100} />
-              <div className={styles.video}>
-                <iframe
-                  src="https://www.youtube.com/embed/9vJMNwCiBls?si=6_t-cTSml-df3R1P"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-            <div className={styles.sponsor}>
-              <Image src="/images/psixogios.png" width={80} height={80} />
-              <div className={styles.video}>
-                <iframe
-                  src="https://www.youtube.com/embed/V6ZRnmGUE9g?si=f_Pzm6jnKr3DyGNL"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-            <div className={styles.sponsor}>
-              <Image src="/images/fridays.png" width={120} height={50} />
-              <div className={styles.video}>
-                <iframe
-                  src="https://www.youtube.com/embed/FvKu0culHjw?si=DURKMsR4oWjA4HOO"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ParallaxText baseVelocity={-2}>
+          SPONSORS <Image src="/images/grey-man.png" width={100} height={100} />{" "}
+          SPONSORS{" "}
+          <Image src="/images/yellow-man.png" width={100} height={100} />
+        </ParallaxText>
+        <ParallaxText baseVelocity={2}>
+          SPONSORS <Image src="/images/grey-man.png" width={100} height={100} />{" "}
+          SPONSORS{" "}
+          <Image src="/images/yellow-man.png" width={100} height={100} />
+        </ParallaxText>
       </section>
 
       {/* TEAM */}
@@ -225,19 +172,6 @@ export default function Home() {
             <Image src="/images/image00006.png" width={220} height={300} />
             <p>@DKARAGOUNIS89</p>
           </div>
-        </div>
-      </section>
-
-      {/* NEWSLETTER */}
-      <section className={styles.newsletter}>
-        <div className={styles.newsletterLeft}>
-          <div>
-            Do you wanna become <br /> <span>BOURDELO?</span>
-          </div>
-        </div>
-        <div className={styles.newsletterRight}>
-          <input placeholder="email" />
-          <a className={styles.button}>SUBMIT</a>
         </div>
       </section>
 

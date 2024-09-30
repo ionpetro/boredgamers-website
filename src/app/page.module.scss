@@ -103,17 +103,16 @@
 
 .descriptionWrapper {
   width: 100%;
-  position: relative; 
+  position: relative;
 }
 
 .paper {
   position: absolute;
   top: -80px;
   left: 0;
-  right: 0; 
+  right: 0;
   width: 100vw;
-  margin-inline: auto; 
-  
+  margin-inline: auto;
 }
 
 .paperBottom {
@@ -123,7 +122,6 @@
   right: 0;
   width: 100vw;
   margin-inline: auto;
- 
 }
 
 .description {
@@ -163,7 +161,6 @@
     font-size: 1.5em;
     font-weight: 500;
   }
-  
 }
 
 .numberWrapper {
@@ -202,11 +199,6 @@
   position: relative;
   width: 1200px;
   padding: 64px 0;
-
-  @media (max-width: $breakpoint-mobile) {
-    background-color: $red;
-    width: 100vw !important;
-  }
 }
 
 .eshopHead {
@@ -220,7 +212,7 @@
   text-align: center;
   font-weight: 100;
   font-size: 1.2em;
-  color: #7A7A7A;
+  color: #7a7a7a;
 }
 
 .eshopHead {
@@ -247,26 +239,6 @@
     top: 80px;
     left: 0;
     animation: infirotate 5s ease-in-out infinite;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    margin: auto;
-    width: fit-content;
-
-    hr {
-      margin-right: 28px;
-      width: 150px;
-    }
-
-    h2 {
-      font-size: 2em;
-    }
-
-    img {
-      top: 90px;
-      width: 80px;
-      height: 80px;
-    }
   }
 }
 
@@ -297,7 +269,6 @@
   padding: 24px 24px 48px 24px;
 
   img {
-    
     @media (max-width: $breakpoint-mobile) {
       width: 200px;
       height: 200px;
@@ -363,9 +334,7 @@
 }
 
 .sponsorsWrapper {
-  padding: 64px 0;
   width: 100vw;
-  background-color: $yellow;
 
   @media (max-width: $breakpoint-mobile) {
     padding: 32px 0;
@@ -545,72 +514,6 @@
 
   p {
     margin-top: -24px;
-  }
-}
-
-.newsletter {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  @media (max-width: $breakpoint-mobile) {
-    width: 100vw !important;
-    grid-template-columns: 1fr;
-  }
-
-  gap: 0;
-}
-
-.newsletterLeft {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  color: black;
-  background-color: $yellow;
-  border: 2px solid black;
-
-  span {
-    font-size: 1.8em;
-    font-weight: 700;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    // font-size: 1.2em;
-
-    span {
-      // font-size: 2em;
-    }
-  }
-}
-
-.newsletterRight {
-  padding: 48px;
-  border: 2px solid black;
-  background-color: $red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  input {
-    background-color: black;
-    outline: none;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 24px;
-    margin-right: 12px;
-    color: white;
-    font-size: 0.9em;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    padding: 24px;
-    flex-direction: column;
-
-    a,
-    input {
-      margin-top: 24px;
-    }
   }
 }
 
