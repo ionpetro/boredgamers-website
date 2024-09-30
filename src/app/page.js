@@ -1,7 +1,6 @@
 "use client"; // This is a client component 👈🏽
 
 import styles from "./page.module.scss";
-import Hero from "../components/Hero/Hero";
 import Image from "next/image";
 import ParallaxText from "../components/ParallaxText/ParallaxText";
 
@@ -10,56 +9,75 @@ export default function Home() {
     <main className={styles.wrapper}>
       {/* HERO */}
       <section className={styles.main}>
-        <div className={styles.left}>
-          <span>Είμαστε οι</span>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={styles.backgroundVideo}
+          style={{ filter: "grayscale(100%)", opacity: "0.2" }}
+        >
+          <source src="/images/background.mov" type="video/quicktime" />
+          Your browser does not support the video tag.
+        </video>
+        <div className={styles.mainHead}>
+          <Image src="/images/logo.png" width={100} height={80} />
           <h1>BOREDGAMERS</h1>
-          <div className={styles.social}>
-            <div className={styles.socialIcon}>
-              <a
-                href="https://www.instagram.com/boredgamersofficial/?hl=en"
-                target="_blank"
-              >
-                <Image src="/images/insta.svg" width={32} height={32} />
-              </a>
-            </div>
-            <div className={styles.socialIcon}>
-              <a
-                href="https://www.youtube.com/@BoredGamersOfficial"
-                target="_blank"
-              >
-                <Image src="/images/yt.svg" width={32} height={32} />
-              </a>
-            </div>
-            <div className={styles.socialIcon}>
-              <a
-                href="https://www.tiktok.com/@boredgamersofficial"
-                target="_blank"
-              >
-                <Image src="/images/tt.svg" width={32} height={32} />
-              </a>
-            </div>
-            <div className={styles.socialIcon}>
-              <a
-                href="https://open.spotify.com/show/46dNeISTE55Mv4TECIctam"
-                target="_blank"
-              >
-                <Image src="/images/sp.svg" width={32} height={32} />
-              </a>
-            </div>
-            <div className={styles.socialIcon}>
-              <a
-                href="https://www.facebook.com/YouUp.BoredGamers/"
-                target="_blank"
-              >
-                <Image src="/images/fb.svg" width={32} height={32} />
-              </a>
-            </div>
+          <div className={styles.joinButtons}>
+            <button className={styles.button}>Subscribe</button>
+            <button className={`${styles.button} ${styles.redButton}`}>
+              Join on YT
+            </button>
           </div>
         </div>
-        <div className={styles.right}>
-          <Hero />
+
+        <div className={styles.social}>
+          <div className={styles.socialIcon}>
+            <a
+              href="https://www.instagram.com/boredgamersofficial/?hl=en"
+              target="_blank"
+            >
+              <Image src="/images/instagram.svg" width={28} height={28} />
+            </a>
+          </div>
+          <div className={styles.socialIcon}>
+            <a
+              href="https://www.youtube.com/@BoredGamersOfficial"
+              target="_blank"
+            >
+              <Image src="/images/youtube.svg" width={28} height={28} />
+            </a>
+          </div>
+          <div className={styles.socialIcon}>
+            <a
+              href="https://www.tiktok.com/@boredgamersofficial"
+              target="_blank"
+            >
+              <Image src="/images/tiktok.svg" width={28} height={28} />
+            </a>
+          </div>
+          <div className={styles.socialIcon}>
+            <a
+              href="https://open.spotify.com/show/46dNeISTE55Mv4TECIctam"
+              target="_blank"
+            >
+              <Image src="/images/sp.svg" width={32} height={32} />
+            </a>
+          </div>
+          <div className={styles.socialIcon}>
+            <a
+              href="https://www.facebook.com/YouUp.BoredGamers/"
+              target="_blank"
+            >
+              <Image src="/images/fb.svg" width={32} height={32} />
+            </a>
+          </div>
         </div>
+        <div className={styles.blackTransitionReverse} />
       </section>
+      {/* 
+      <div className={styles.sponsorSpacing}></div>
+      <div className={styles.sponsorSpacing}></div> */}
 
       {/* DESCRIPTION */}
       <div
@@ -134,12 +152,6 @@ export default function Home() {
         <div className={styles.blackTransition} />
         <section className={styles.sponsorsWrapper} id="sponsors">
           <ParallaxText baseVelocity={-2}>
-            SPONSORS{" "}
-            <Image src="/images/grey-man.png" width={100} height={100} />{" "}
-            SPONSORS{" "}
-            <Image src="/images/yellow-man.png" width={100} height={100} />
-          </ParallaxText>
-          <ParallaxText baseVelocity={2}>
             SPONSORS{" "}
             <Image src="/images/grey-man.png" width={100} height={100} />{" "}
             SPONSORS{" "}
@@ -282,17 +294,81 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className={styles.footer}>
-        <small>
-          Developed with ❤️ by{" "}
-          <a href="https://www.instagram.com/ionpetro/" target="_blank">
-            <em>ionpetro</em>
-          </a>
-        </small>
-        <small className={styles.rights}>
-          © boredgamers.com, Inc. All rights reserved.
-        </small>
-      </footer>
+      {/* JOIN */}
+      <div
+        className={styles.descriptionWrapper}
+        style={{
+          backgroundImage: "url('/images/backend.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <img src="/images/paper.png" className={styles.paper} />
+        <section className={styles.join}>
+          <h1>JOIN THE BOREDGAMERS</h1>
+          <div className={styles.joinButtons}>
+            <button className={styles.button}>Subscribe</button>
+            <button className={`${styles.button} ${styles.redButton}`}>
+              Join on YT
+            </button>
+          </div>
+          <div className={styles.social}>
+            <div className={styles.socialIcon}>
+              <a
+                href="https://www.instagram.com/boredgamersofficial/?hl=en"
+                target="_blank"
+              >
+                <Image src="/images/instagram.svg" width={28} height={28} />
+              </a>
+            </div>
+            <div className={styles.socialIcon}>
+              <a
+                href="https://www.youtube.com/@BoredGamersOfficial"
+                target="_blank"
+              >
+                <Image src="/images/youtube.svg" width={28} height={28} />
+              </a>
+            </div>
+            <div className={styles.socialIcon}>
+              <a
+                href="https://www.tiktok.com/@boredgamersofficial"
+                target="_blank"
+              >
+                <Image src="/images/tiktok.svg" width={28} height={28} />
+              </a>
+            </div>
+            <div className={styles.socialIcon}>
+              <a
+                href="https://open.spotify.com/show/46dNeISTE55Mv4TECIctam"
+                target="_blank"
+              >
+                <Image src="/images/sp.svg" width={32} height={32} />
+              </a>
+            </div>
+            <div className={styles.socialIcon}>
+              <a
+                href="https://www.facebook.com/YouUp.BoredGamers/"
+                target="_blank"
+              >
+                <Image src="/images/fb.svg" width={32} height={32} />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <footer className={styles.footer}>
+          <small>
+            Developed with ❤️ by{" "}
+            <a href="https://www.x.com/ionpetropoulos" target="_blank">
+              <em>ionpetro</em>
+            </a>
+          </small>
+          <small className={styles.rights}>
+            © boredgamers.com, Inc. All rights reserved.
+          </small>
+        </footer>
+      </div>
     </main>
   );
 }
