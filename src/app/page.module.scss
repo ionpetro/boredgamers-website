@@ -7,6 +7,14 @@
   justify-content: center;
 }
 
+.logo {
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 12px;
+    width: 60px;
+    height: 48px;
+  }
+}
+
 .backgroundVideo {
   position: absolute;
   top: 0;
@@ -33,15 +41,20 @@
 
   h1 {
     margin: 0 0 42px 0;
-    font-size: 10em;
+    font-size: 8em;
     z-index: 9999;
   }
 
+  @media (max-width: $breakpoint-tablet) {
+    h1 {
+      font-size: 6em;
+    }
+  }
+
   @media (max-width: $breakpoint-mobile) {
-    display: block;
-    padding: unset;
-    padding-top: 60px;
-    width: 100vw;
+    h1 {
+      font-size: 2.5em;
+    }
   }
 }
 
@@ -94,6 +107,11 @@
   width: 100vw;
   margin-inline: auto;
   z-index: 9999;
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 60px;
+    top: -40px;
+  }
 }
 
 .paperBottom {
@@ -103,6 +121,11 @@
   right: 0;
   width: 100vw;
   margin-inline: auto;
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 60px;
+    bottom: -40px;
+  }
 }
 
 .description {
@@ -121,26 +144,42 @@
     margin-right: -32px;
   }
 
+  @media (max-width: $breakpoint-laptop) {
+    margin: 30px auto;
+  }
+
   @media (max-width: $breakpoint-mobile) {
+    margin: 20px auto;
     display: block;
     max-width: unset;
     width: 100vw;
     padding: 0px 0;
 
     & > :nth-child(1) {
-      transform: scale(0.6) translate(-140px, 50px);
+      transform: scale(0.5) translate(-140px, 50px);
+      margin-top: -12px;
+      margin-bottom: -12px;
     }
 
     & > :nth-child(3) {
-      transform: scale(0.6) translate(140px, 50px);
+      transform: scale(0.5) translate(140px, 50px);
+      margin-top: -12px;
+      margin-bottom: -12px;
     }
   }
 }
 
 .descriptionContent {
+  padding: 0 24px;
   h3 {
     font-size: 1.5em;
     font-weight: 500;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    h3 {
+      font-size: 1.3em;
+    }
   }
 }
 
@@ -149,6 +188,10 @@
   justify-content: space-around;
   max-width: 500px;
   margin: 120px auto 0 auto;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 40px auto 0 auto;
+  }
 }
 
 .number {
@@ -170,16 +213,19 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    padding: 4px;
+    transform: scale(0.8);
     border: 2px solid white;
-    margin: 4px;
   }
 }
 
 .eshop {
   position: relative;
-  width: 1200px;
-  padding: 64px 0;
+  max-width: 1200px;
+  padding: 64px 32px;
+
+  @media (max-width: $breakpoint-mobile) {
+    // width: 100vw;
+  }
 }
 
 .eshopHead {
@@ -187,6 +233,11 @@
   text-align: center;
   font-weight: 800;
   font-size: 3em;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: 40px;
+    font-size: 2em;
+  }
 }
 
 .eshopSubhead {
@@ -195,6 +246,10 @@
   font-weight: 100;
   font-size: 1.2em;
   color: #7a7a7a;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1em;
+  }
 }
 
 .products {
@@ -263,6 +318,10 @@
   background-color: $red;
   color: white;
   margin-left: 24px;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-left: 12px;
+  }
 
   &:hover {
     background-color: white;
@@ -412,7 +471,11 @@
 }
 
 .joinButtons {
-  transform: scale(1.5);
+  transform: scale(1.2);
+
+  @media (max-width: $breakpoint-mobile) {
+    transform: scale(1);
+  }
 }
 
 .footer {
