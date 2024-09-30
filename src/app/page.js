@@ -241,8 +241,6 @@ export default function Home() {
               <p>Entertain and connect generations of fans</p>
               <iframe
                 className={styles.video}
-                width="560"
-                height="315"
                 src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -259,8 +257,6 @@ export default function Home() {
 
               <iframe
                 className={styles.video}
-                width="560"
-                height="315"
                 src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -277,8 +273,6 @@ export default function Home() {
 
               <iframe
                 className={styles.video}
-                width="560"
-                height="315"
                 src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -291,12 +285,10 @@ export default function Home() {
                 <img src="/images/psixogios.png" width={80} height={80} />
                 <h2>ΨΥΧΟΓΙΟΣ</h2>
               </div>
-              <p>In here, it's always Friday.</p>
+              <p>Ένας κόσμος ψυχαγωγίας.</p>
 
               <iframe
                 className={styles.video}
-                width="560"
-                height="315"
                 src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
