@@ -234,95 +234,74 @@ export default function Home() {
           <div className={styles.sponsorSpacing} />
           <div className={styles.sponsorsGrid}>
             <div className={styles.sponsor}>
-              <div>
-                <div>
-                  <div>
-                    <div className={styles.sponsorHead}>
-                      <img src="/images/hasbro.png" width={80} height={80} />
-                      <h2>Hasbro</h2>
-                    </div>
-                    <p>Entertain and connect generations of fans</p>
-                  </div>
-                  <iframe
-                    className={styles.video}
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+              <div className={styles.sponsorHead}>
+                <img src="/images/hasbro.png" width={80} height={80} />
+                <h2>Hasbro</h2>
               </div>
+              <p>Entertain and connect generations of fans</p>
+              <iframe
+                className={styles.video}
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
 
             <div className={styles.sponsor}>
-              <div>
-                <div>
-                  <div>
-                    <div className={styles.sponsorHead}>
-                      <img src="/images/efood.png" width={80} height={80} />
-                      <h2>EFOOD</h2>
-                    </div>
-                    <p>Το efood είναι το delivery στην Ελλάδα!</p>
-                  </div>
-                  <iframe
-                    className={styles.video}
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+              <div className={styles.sponsorHead}>
+                <img src="/images/efood.png" width={80} height={80} />
+                <h2>EFOOD</h2>
               </div>
+              <p>Το efood είναι το delivery στην Ελλάδα!</p>
+
+              <iframe
+                className={styles.video}
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
 
             <div className={styles.sponsor}>
-              <div>
-                <div>
-                  <div>
-                    <div className={styles.sponsorHead}>
-                      <img src="/images/fridays.png" width={150} height={80} />
-                      <h2>Fridays</h2>
-                    </div>
-                    <p>In here, it's always Friday.</p>
-                  </div>
-                  <iframe
-                    className={styles.video}
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+              <div className={styles.sponsorHead}>
+                <img src="/images/fridays.png" width={150} height={80} />
+                <h2>Fridays</h2>
               </div>
+              <p>In here, it's always Friday.</p>
+
+              <iframe
+                className={styles.video}
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
 
             <div className={styles.sponsor}>
-              <div>
-                <div>
-                  <div>
-                    <div className={styles.sponsorHead}>
-                      <img src="/images/psixogios.png" width={80} height={80} />
-                      <h2>ΨΥΧΟΓΙΟΣ</h2>
-                    </div>
-                    <p>Ένας κόσμος ψυχολογίας</p>
-                  </div>
-                  <iframe
-                    className={styles.video}
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+              <div className={styles.sponsorHead}>
+                <img src="/images/psixogios.png" width={80} height={80} />
+                <h2>ΨΥΧΟΓΙΟΣ</h2>
               </div>
+              <p>In here, it's always Friday.</p>
+
+              <iframe
+                className={styles.video}
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </section>

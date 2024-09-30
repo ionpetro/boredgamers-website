@@ -72,6 +72,10 @@
   div {
     margin-right: 12px;
   }
+
+  @media (max-width: $breakpoint-mobile) {
+    transform: scale(0.8);
+  }
 }
 
 .socialIcon {
@@ -97,6 +101,10 @@
 .descriptionWrapper {
   width: 100%;
   position: relative;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100vw;
+  }
 }
 
 .paper {
@@ -257,6 +265,7 @@
   padding: 82px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 24px;
 
   * {
     z-index: 9999;
@@ -264,7 +273,6 @@
 
   @media (max-width: $breakpoint-mobile) {
     margin: 40px 0;
-    padding: 0;
     grid-template-columns: 1fr;
   }
 }
@@ -278,16 +286,14 @@
   color: black;
   padding: 24px 24px 48px 24px;
 
-  img {
-    @media (max-width: $breakpoint-mobile) {
-      width: 200px;
-      height: 200px;
-    }
+  @media (max-width: $breakpoint-mobile) {
+    width: 280px;
   }
 
-  @media (max-width: $breakpoint-mobile) {
-    &:nth-child(2) {
-      margin-top: 48px;
+  img {
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%;
+      height: 200px;
     }
   }
 
@@ -348,6 +354,11 @@
   grid-template-columns: 1fr 1fr;
   max-width: 1200px;
   margin: auto;
+  gap: 24px;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .blackTransition {
@@ -366,21 +377,42 @@
 .sponsorsWrapper {
   width: 100vw;
   padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 9999;
 
   @media (max-width: $breakpoint-mobile) {
     padding: 32px 0;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 
 .sponsorSpacing {
   height: 120px;
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 60px;
+  }
 }
 
 .sponsor {
   margin: 120px auto 80px auto;
   max-width: 1200px;
   display: flex;
-  align-items: center;
+  align-items: start;
+  flex-direction: column;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 24px;
+  }
 }
 
 .sponsorHead {
@@ -388,6 +420,12 @@
   align-items: center;
   img {
     margin-right: 24px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    h2 {
+      font-size: 1.4em;
+    }
   }
 }
 
@@ -397,6 +435,8 @@
   justify-content: center;
   flex-direction: column;
   padding-bottom: 240px;
+  margin: 0 24px;
+  text-align: center;
 
   h1 {
     font-size: 5em;
@@ -404,6 +444,18 @@
 
   p {
     margin-top: -64px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-bottom: 100px;
+    h1 {
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 0.8em;
+      margin-top: 0;
+    }
   }
 }
 
@@ -424,6 +476,11 @@
 .video {
   margin-top: 24px;
   filter: grayscale(100%);
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+    height: 300px;
+  }
 }
 
 .team {
@@ -432,6 +489,10 @@
   width: 800px;
   margin: auto;
   margin-bottom: 88px;
+
+  @media (max-width: $breakpoint-laptop) {
+    margin-top: -40px;
+  }
 
   @media (max-width: $breakpoint-mobile) {
     width: unset;
@@ -468,13 +529,20 @@
     text-align: center;
     font-size: 5em;
   }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 40px 24px;
+    h1 {
+      font-size: 2em;
+    }
+  }
 }
 
 .joinButtons {
   transform: scale(1.2);
 
   @media (max-width: $breakpoint-mobile) {
-    transform: scale(1);
+    transform: scale(0.9);
   }
 }
 
@@ -494,6 +562,10 @@
     cursor: pointer;
     color: $yellow;
     text-decoration: dashed;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: unset;
   }
 }
 
