@@ -7,31 +7,6 @@
   justify-content: center;
 }
 
-.navbar {
-  padding: 32px;
-  width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  @media (max-width: $breakpoint-mobile) {
-    padding: 0;
-    width: 100vw;
-
-    & > :nth-child(1) {
-      transform: scale(0.45);
-    }
-
-    & > :nth-child(2) {
-      transform: scale(0.6);
-    }
-
-    & > :nth-child(3) {
-      transform: scale(0.45);
-    }
-  }
-}
-
 .main {
   padding: 120px 0 180px 0;
   color: white;
@@ -259,26 +234,6 @@
   }
 }
 
-.rectRight {
-  position: absolute;
-  right: -275px;
-  top: -36px;
-
-  @media (max-width: $breakpoint-mobile) {
-    display: none;
-  }
-}
-
-.rectLeft {
-  position: absolute;
-  left: -292px;
-  bottom: 0px;
-
-  @media (max-width: $breakpoint-mobile) {
-    display: none;
-  }
-}
-
 .button {
   padding: 8px 16px;
   background-color: $yellow;
@@ -397,60 +352,12 @@
 .team {
   position: relative;
   padding: 64px 0;
-  width: 1200px;
+  width: 800px;
   margin: auto;
   margin-bottom: 88px;
 
   @media (max-width: $breakpoint-mobile) {
     width: unset;
-  }
-}
-
-.teamHead {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  margin: 64px;
-
-  h2 {
-    font-weight: 800;
-  }
-
-  hr {
-    display: block;
-    height: 5px;
-    border: 0;
-    border-top: 5px solid white;
-    width: 100%;
-    margin-right: 64px;
-  }
-
-  img {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    animation: infirotate 5s ease-in-out infinite;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    margin: auto;
-    width: fit-content;
-
-    hr {
-      margin-right: 28px;
-      width: 150px;
-    }
-
-    h2 {
-      font-size: 2em;
-    }
-
-    img {
-      top: 90px;
-      width: 80px;
-      height: 80px;
-    }
   }
 }
 
@@ -468,7 +375,8 @@
   }
 
   p {
-    margin-top: -24px;
+    font-family: "Gagalin", serif;
+    margin-top: -42px;
   }
 }
 
@@ -476,9 +384,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
+  width: 100vw;
+  padding: 8px 0;
+  flex-direction: column;
   padding: 12px 24px;
-
   small {
     font-size: 0.5em;
   }
@@ -487,12 +396,6 @@
     cursor: pointer;
     color: $yellow;
     text-decoration: dashed;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    width: 100vw;
-    padding: 8px 0;
-    flex-direction: column;
   }
 }
 
