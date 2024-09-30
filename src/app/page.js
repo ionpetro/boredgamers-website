@@ -11,7 +11,7 @@ export default function Home() {
       {/* HERO */}
       <section className={styles.main}>
         <div className={styles.left}>
-          <span>Welcome to the</span>
+          <span>Είμαστε οι</span>
           <h1>BOREDGAMERS</h1>
           <div className={styles.social}>
             <div className={styles.socialIcon}>
@@ -77,9 +77,9 @@ export default function Home() {
           <Image src="/images/grey-man.png" width={250} height={250} />
           <div className={styles.descriptionContent}>
             <h3>
-              ειμαστε οι BoredGamers... Θα μας βρειτε να λeμε παραξενες
-              ιστορiες, να τσακωνομαστε, να ταξιδευουμε και να επικοινωνουμε με
-              ομορφο τροπο πραγματα που μας ενοχλουν...
+              Θα μας βρειτε να λeμε παραξενες ιστορiες, να τσακωνομαστε, να
+              ταξιδευουμε και να επικοινωνουμε με ομορφο τροπο πραγματα που μας
+              ενοχλουν...
             </h3>
             <div className={styles.numberWrapper}>
               <div className={styles.number}>
@@ -122,31 +122,138 @@ export default function Home() {
       </section>
 
       {/* SPONSORS */}
-      <section className={styles.sponsorsWrapper} id="sponsors">
-        <ParallaxText baseVelocity={-2}>
-          SPONSORS <Image src="/images/grey-man.png" width={100} height={100} />{" "}
-          SPONSORS{" "}
-          <Image src="/images/yellow-man.png" width={100} height={100} />
-        </ParallaxText>
-        <ParallaxText baseVelocity={2}>
-          SPONSORS <Image src="/images/grey-man.png" width={100} height={100} />{" "}
-          SPONSORS{" "}
-          <Image src="/images/yellow-man.png" width={100} height={100} />
-        </ParallaxText>
-      </section>
+      <div
+        className={styles.sponsorsLayout}
+        style={{
+          backgroundImage: "url('/images/sponsorsback.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className={styles.blackTransition} />
+        <section className={styles.sponsorsWrapper} id="sponsors">
+          <ParallaxText baseVelocity={-2}>
+            SPONSORS{" "}
+            <Image src="/images/grey-man.png" width={100} height={100} />{" "}
+            SPONSORS{" "}
+            <Image src="/images/yellow-man.png" width={100} height={100} />
+          </ParallaxText>
+          <ParallaxText baseVelocity={2}>
+            SPONSORS{" "}
+            <Image src="/images/grey-man.png" width={100} height={100} />{" "}
+            SPONSORS{" "}
+            <Image src="/images/yellow-man.png" width={100} height={100} />
+          </ParallaxText>
+
+          <div className={styles.sponsorSpacing} />
+          <div className={styles.sponsorsGrid}>
+            <div className={styles.sponsor}>
+              <div>
+                <div>
+                  <div>
+                    <div className={styles.sponsorHead}>
+                      <img src="/images/hasbro.png" width={80} height={80} />
+                      <h2>Hasbro</h2>
+                    </div>
+                    <p>Entertain and connect generations of fans</p>
+                  </div>
+                  <iframe
+                    className={styles.video}
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.sponsor}>
+              <div>
+                <div>
+                  <div>
+                    <div className={styles.sponsorHead}>
+                      <img src="/images/efood.png" width={80} height={80} />
+                      <h2>EFOOD</h2>
+                    </div>
+                    <p>Το efood είναι το delivery στην Ελλάδα!</p>
+                  </div>
+                  <iframe
+                    className={styles.video}
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.sponsor}>
+              <div>
+                <div>
+                  <div>
+                    <div className={styles.sponsorHead}>
+                      <img src="/images/fridays.png" width={150} height={80} />
+                      <h2>Fridays</h2>
+                    </div>
+                    <p>In here, it's always Friday.</p>
+                  </div>
+                  <iframe
+                    className={styles.video}
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.sponsor}>
+              <div>
+                <div>
+                  <div>
+                    <div className={styles.sponsorHead}>
+                      <img src="/images/psixogios.png" width={80} height={80} />
+                      <h2>ΨΥΧΟΓΙΟΣ</h2>
+                    </div>
+                    <p>Ένας κόσμος ψυχολογίας</p>
+                  </div>
+                  <iframe
+                    className={styles.video}
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className={styles.workWithUs}>
+          <h1>Want to work with us?</h1>
+          <p>Shoot us a message and let's add you to this page.</p>
+
+          <button className={styles.button}>Work with us</button>
+        </div>
+
+        <div className={styles.blackTransitionReverse} />
+      </div>
 
       {/* TEAM */}
       <section className={styles.team}>
-        <div className={styles.teamHead}>
-          <Image
-            src="/images/yellow-man.png"
-            width={100}
-            height={100}
-            className={styles.eshopImage}
-          />
-          <hr />
-          <h2>Team</h2>
-        </div>
         <div className={styles.teamMain}>
           <div>
             <Image src="/images/image00003.png" width={220} height={300} />
