@@ -301,7 +301,7 @@ export default function Home() {
               <p>Entertain and connect generations of fans</p>
               <iframe
                 className={styles.video}
-                src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
+                src="https://www.youtube.com/embed/Aq14ZW5iGH0?si=kNaF2_aPWivpBUwf"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -317,7 +317,7 @@ export default function Home() {
 
               <iframe
                 className={styles.video}
-                src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
+                src="https://www.youtube.com/embed/LesPE5esyIE?si=0d3_XYytG_b-Recq"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -333,7 +333,7 @@ export default function Home() {
 
               <iframe
                 className={styles.video}
-                src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
+                src="https://www.youtube.com/embed/fOfiiF-hEss?si=SlOLBMNCdmCRl8Q_"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -349,7 +349,7 @@ export default function Home() {
 
               <iframe
                 className={styles.video}
-                src="https://www.youtube.com/embed/SfQlBRL51Sw?si=NPyRX5JkR6eFUgt2"
+                src="https://www.youtube.com/embed/6I439jTP6jA?si=v4ztYhdkyGwM_Tse"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
