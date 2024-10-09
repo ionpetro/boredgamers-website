@@ -311,60 +311,66 @@ export default function Home() {
       {/* TEAM */}
       <section className={styles.team}>
         <div className={styles.teamMain}>
-          <div>
-            <Image
-              src="/images/image00003.png"
-              width={220}
-              height={300}
-              alt="Team member @01001101_K"
-            />
-            <p>@01001101_K</p>
-          </div>
-          <div>
-            <Image
-              src="/images/image00002.png"
-              width={220}
-              height={300}
-              alt="Team member @JOHNBOURSI"
-            />
-            <p>@JOHNBOURSI</p>
-          </div>
-          <div>
-            <Image
-              src="/images/image00001.png"
-              width={220}
-              height={300}
-              alt="Team member @CS.SAKELLARIOU"
-            />
-            <p>@CS.SAKELLARIOU</p>
-          </div>
-          <div>
-            <Image
-              src="/images/image00004.png"
-              width={220}
-              height={300}
-              alt="Team member @VIKINGBAE"
-            />
-            <p>@VIKINGBAE</p>
-          </div>
-          <div>
-            <Image
-              src="/images/image00005.png"
-              width={220}
-              height={300}
-              alt="Team member @PARASKEVYO"
-            />
-            <p>@PARASKEVYO</p>
-          </div>
-          <div>
-            <Image
-              src="/images/image00006.png"
-              width={220}
-              height={300}
-              alt="Team member @DKARAGOUNIS89"
-            />
-            <p>@DKARAGOUNIS89</p>
-          </div>
+          {[
+            {
+              name: "@01001101_K",
+              image: "image00003.png",
+              hoverImage: "mike.png",
+              link: "https://www.instagram.com/01001101_k/",
+            },
+            {
+              name: "@JOHNBOURSI",
+              image: "image00002.png",
+              hoverImage: "john.png",
+              link: "https://www.instagram.com/johnboursi/",
+            },
+            {
+              name: "@CS.SAKELLARIOU",
+              image: "image00001.png",
+              hoverImage: "chris.png",
+              link: "https://www.instagram.com/cs.sakellariou/",
+            },
+            {
+              name: "@VIKINGBAE",
+              image: "image00004.png",
+              hoverImage: "avi.png",
+              link: "https://www.instagram.com/vikingbae/",
+            },
+            {
+              name: "@PARASKEVYO",
+              image: "image00005.png",
+              hoverImage: "paraskevi.png",
+              link: "https://www.instagram.com/paraskevyo/",
+            },
+            {
+              name: "@DKARAGOUNIS89",
+              image: "image00006.png",
+              hoverImage: "dio.png",
+              link: "https://www.instagram.com/dkaragounis89/",
+            },
+          ].map((member, index) => (
+            <div key={index} className={styles.teamMember}>
+              <div className={styles.imageContainer}>
+                <a href={member.link} target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src={`/images/${member.image}`}
+                    width={220}
+                    height={300}
+                    alt={`Team member ${member.name}`}
+                    className={styles.defaultImage}
+                  />
+                  <Image
+                    src={`/images/${member.hoverImage}`}
+                    width={100}
+                    height={100}
+                    alt={`Hover image for ${member.name}`}
+                    className={styles.hoverImage}
+                  />
+                </a>
+              </div>
+              <p className={styles.teamName}>{member.name}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -458,7 +464,7 @@ export default function Home() {
 
         <footer className={styles.footer}>
           <small>
-            Developed with ❤️ by{" "}
+            Developed with 🥐 and ☕ by{" "}
             <a href="https://www.x.com/ionpetropoulos" target="_blank">
               <em>ionpetro</em>
             </a>
