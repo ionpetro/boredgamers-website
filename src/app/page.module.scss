@@ -625,3 +625,15 @@
   text-align: center;
   margin-top: 32px;
 }
+
+.copyEmail {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 40px;
+
+  p {
+    font-size: 0.8em;
+  }
+}

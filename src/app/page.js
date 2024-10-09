@@ -2,9 +2,18 @@
 
 import styles from "./page.module.scss";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import ParallaxText from "../components/ParallaxText/ParallaxText";
 
 export default function Home() {
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  useEffect(() => {
+    if (emailCopied) {
+      setTimeout(() => setEmailCopied(false), 2000);
+    }
+  }, [emailCopied]);
+
   return (
     <main className={styles.wrapper}>
       {/* HERO */}
@@ -30,8 +39,26 @@ export default function Home() {
           />
           <h1>BOREDGAMERS</h1>
           <div className={styles.joinButtons}>
-            <button className={styles.button}>Subscribe</button>
-            <button className={`${styles.button} ${styles.redButton}`}>
+            <button
+              className={styles.button}
+              onClick={() =>
+                window.open(
+                  "https://www.youtube.com/@BoredGamersOfficial?sub_confirmation=1",
+                  "_blank"
+                )
+              }
+            >
+              Subscribe
+            </button>
+            <button
+              className={`${styles.button} ${styles.redButton}`}
+              onClick={() =>
+                window.open(
+                  "https://www.youtube.com/@BoredGamersOfficial/join",
+                  "_blank"
+                )
+              }
+            >
               Join on YT
             </button>
           </div>
@@ -302,7 +329,14 @@ export default function Home() {
           <h1>Want to work with us?</h1>
           <p>Shoot us a message and let's add you to this page.</p>
 
-          <button className={styles.button}>Work with us</button>
+          <button
+            className={styles.button}
+            onClick={() =>
+              (window.location.href = "mailto:bgbusinessoffers@gmail.com")
+            }
+          >
+            Work with us
+          </button>
         </div>
 
         <div className={styles.blackTransitionReverse} />
@@ -388,8 +422,26 @@ export default function Home() {
         <section className={styles.join}>
           <h1>JOIN THE BOREDGAMERS</h1>
           <div className={styles.joinButtons}>
-            <button className={styles.button}>Subscribe</button>
-            <button className={`${styles.button} ${styles.redButton}`}>
+            <button
+              className={styles.button}
+              onClick={() =>
+                window.open(
+                  "https://www.youtube.com/@BoredGamersOfficial?sub_confirmation=1",
+                  "_blank"
+                )
+              }
+            >
+              Subscribe
+            </button>
+            <button
+              className={`${styles.button} ${styles.redButton}`}
+              onClick={() =>
+                window.open(
+                  "https://www.youtube.com/@BoredGamersOfficial/join",
+                  "_blank"
+                )
+              }
+            >
               Join on YT
             </button>
           </div>
@@ -459,7 +511,31 @@ export default function Home() {
                 />
               </a>
             </div>
+            <div className={styles.socialIcon}>
+              <a
+                onClick={() => {
+                  navigator.clipboard
+                    .writeText("bgbusinessoffers@gmail.com")
+                    .then(() => setEmailCopied(true))
+                    .catch((err) =>
+                      console.error("Failed to copy email: ", err)
+                    );
+                }}
+              >
+                <Image
+                  src="/images/mail.svg"
+                  width={32}
+                  height={32}
+                  alt="Email icon"
+                />
+              </a>
+            </div>
           </div>
+          {emailCopied && (
+            <div className={styles.copyEmail}>
+              <p>Email copied to clipboard 📧</p>
+            </div>
+          )}
         </section>
 
         <footer className={styles.footer}>
