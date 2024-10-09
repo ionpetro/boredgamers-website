@@ -5,14 +5,29 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import ParallaxText from "../components/ParallaxText/ParallaxText";
 
+const CHANNEL_ID = "UCAOcbyg6KNM2h99t7XNiQ8A";
+
 export default function Home() {
   const [emailCopied, setEmailCopied] = useState(false);
+  const [featuredVideos, setFeaturedVideos] = useState([]);
 
   useEffect(() => {
     if (emailCopied) {
       setTimeout(() => setEmailCopied(false), 2000);
     }
   }, [emailCopied]);
+
+  useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_YOUTUBE_API_KEY);
+    const fetchData = async () => {
+      const response = await fetch(
+        `https://www.googleapis.com/youtube/v3/search?key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}&channelId=${CHANNEL_ID}&part=snippet&order=date&maxResults=2`
+      );
+      const data = await response.json();
+      setFeaturedVideos(data.items);
+    };
+    fetchData();
+  }, []);
 
   return (
     <main className={styles.wrapper}>
@@ -135,6 +150,23 @@ export default function Home() {
         <div className={styles.blackTransitionReverse} />
       </section>
 
+      {/* FEATURED */}
+      <section className={styles.featured}>
+        <h2 className={styles.featuredHead}>ΠΡΟΣΦΑΤΑ ΒΙΝΤΕΟ</h2>
+        <div className={styles.featuredGrid}>
+          {featuredVideos.map((video, index) => (
+            <div key={index} className={styles.featuredItem}>
+              <iframe
+                src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                title={video.snippet.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* DESCRIPTION */}
       <div
         className={styles.descriptionWrapper}
@@ -157,7 +189,7 @@ export default function Home() {
           <div className={styles.descriptionContent}>
             <h3>
               Θα μας βρειτε να λeμε παραξενες ιστορiες, να τσακωνομαστε, να
-              ταξιδευουμε και να επικοινωνουμε με ο��ορφο τροπο πραγματα που μας
+              ταξιδευουμε και να επικοινωνουμε με ομορφο τροπο πραγματα που μας
               ενοχλουν...
             </h3>
             <div className={styles.numberWrapper}>
