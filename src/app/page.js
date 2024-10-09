@@ -25,6 +25,7 @@ export default function Home() {
           playsInline
           className={styles.backgroundVideo}
           style={{ filter: "grayscale(100%)", opacity: "0.2" }}
+          poster="/images/video-poster.png"
         >
           <source src="/images/background.mov" type="video/quicktime" />
           Your browser does not support the video tag.
@@ -156,7 +157,7 @@ export default function Home() {
           <div className={styles.descriptionContent}>
             <h3>
               Θα μας βρειτε να λeμε παραξενες ιστορiες, να τσακωνομαστε, να
-              ταξιδευουμε και να επικοινωνουμε με ομορφο τροπο πραγματα που μας
+              ταξιδευουμε και να επικοινωνουμε με ο��ορφο τροπο πραγματα που μας
               ενοχλουν...
             </h3>
             <div className={styles.numberWrapper}>
