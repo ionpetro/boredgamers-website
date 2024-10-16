@@ -1,10 +1,36 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "BoredGamers",
-  description: "BoredGamers Official Website",
+  metadataBase: new URL("https://www.boredgamers.com"),
+  title: "BoredGamers - Entertainment and Gaming Community",
+  description:
+    "Join BoredGamers for entertaining stories, travel adventures, and unique perspectives on life. Subscribe to our YouTube channel and join our community!",
   icons: {
     icon: "/images/logo.png",
+  },
+  keywords: "BoredGamers, YouTube, gaming, entertainment, community",
+  openGraph: {
+    title: "BoredGamers - Entertainment and Gaming Community",
+    description:
+      "Join BoredGamers for entertaining stories, travel adventures, and unique perspectives on life. Subscribe to our YouTube channel and join our community!",
+    url: "/",
+    siteName: "BoredGamers",
+    images: [
+      {
+        url: "/images/yellow.png",
+        width: 796,
+        height: 763,
+      },
+    ],
+    locale: "el_GR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BoredGamers - Entertainment and Gaming Community",
+    description:
+      "Join BoredGamers for entertaining stories, travel adventures, and unique perspectives on life. Subscribe to our YouTube channel and join our community!",
+    images: ["/images/yellow.png"],
   },
 };
 

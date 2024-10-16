@@ -4,6 +4,8 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import ParallaxText from "../components/ParallaxText/ParallaxText";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const CHANNEL_ID = "UCAOcbyg6KNM2h99t7XNiQ8A";
 
@@ -17,8 +19,27 @@ export default function Home() {
     }
   }, [emailCopied]);
 
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
+
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
+
+  const imageVariants = {
+    hidden: { x: -150, y: -150, opacity: 0 },
+    visible: { x: 0, y: 0, opacity: 1, transition: { duration: 1 } },
+  };
+
+  const imageVariantsReverse = {
+    hidden: { x: 150, y: 150, opacity: 0 },
+    visible: { x: 0, y: 0, opacity: 1, transition: { duration: 1 } },
+  };
+
   useEffect(() => {
-    console.log(process.env.NEXT_PUBLIC_YOUTUBE_API_KEY);
     const fetchData = async () => {
       const response = await fetch(
         `https://www.googleapis.com/youtube/v3/search?key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}&channelId=${CHANNEL_ID}&part=snippet&order=date&maxResults=2`
@@ -180,12 +201,20 @@ export default function Home() {
         <img src="/images/paper.png" className={styles.paper} />
 
         <section className={styles.description}>
-          <Image
-            src="/images/grey-man.png"
-            width={250}
-            height={250}
-            alt="Grey cartoon character"
-          />
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={imageVariants}
+          >
+            <Image
+              className={styles.descriptionImage1}
+              src="/images/grey-man.png"
+              width={250}
+              height={250}
+              alt="Grey cartoon character"
+            />
+          </motion.div>
           <div className={styles.descriptionContent}>
             <h3>
               Θα μας βρειτε να λeμε παραξενες ιστορiες, να τσακωνομαστε, να
@@ -222,12 +251,20 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Image
-            src="/images/yellow-man.png"
-            width={250}
-            height={250}
-            alt="Yellow cartoon character"
-          />
+          <motion.div
+            ref={ref2}
+            initial="hidden"
+            animate={inView2 ? "visible" : "hidden"}
+            variants={imageVariantsReverse}
+          >
+            <Image
+              className={styles.descriptionImage2}
+              src="/images/yellow-man.png"
+              width={250}
+              height={250}
+              alt="Yellow cartoon character"
+            />
+          </motion.div>
         </section>
         <img src="/images/paper.png" className={styles.paperBottom} />
       </div>
@@ -428,8 +465,8 @@ export default function Home() {
                   />
                   <Image
                     src={`/images/${member.hoverImage}`}
-                    width={100}
-                    height={100}
+                    width={300}
+                    height={300}
                     alt={`Hover image for ${member.name}`}
                     className={styles.hoverImage}
                   />
