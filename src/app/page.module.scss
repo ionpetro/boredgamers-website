@@ -615,6 +615,14 @@
   }
 }
 
+.moreWrapper {
+  transform: scale(1.2);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .joinButtons {
   transform: scale(1.2);
 
@@ -624,6 +632,7 @@
 }
 
 .footer {
+  font-size: 0.8em;
   display: flex;
   align-items: center;
   justify-content: space-between;

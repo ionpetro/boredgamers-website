@@ -297,6 +297,9 @@ export default function Home() {
             <a className={`${styles.button} ${styles.disabled}`}>SOLD OUT</a>
           </div>
         </div>
+        <div className={`${styles.moreWrapper}`}>
+          <a className={`${styles.button} ${styles.redButton}`}>All Products</a>
+        </div>
       </section>
 
       {/* SPONSORS */}
@@ -609,15 +612,15 @@ export default function Home() {
         </section>
 
         <footer className={styles.footer}>
-          <small>
+          <div>
             Developed with 🥐 and ☕ by{" "}
-            <a href="https://www.x.com/ionpetropoulos" target="_blank">
+            <a href="https://ionpetro.com" target="_blank">
               <em>ionpetro</em>
             </a>
-          </small>
-          <small className={styles.rights}>
+          </div>
+          <div className={styles.rights}>
             © boredgamers.com, Inc. All rights reserved.
-          </small>
+          </div>
         </footer>
       </div>
     </main>
