@@ -622,7 +622,7 @@ export default function Home() {
             </a>
           </div>
           <div className={styles.rights}>
-            © boredgamers.com, Inc. All rights reserved.
+            © boredgamers.gr, Inc. All rights reserved.
           </div>
         </footer>
       </div>
