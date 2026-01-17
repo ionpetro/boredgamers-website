@@ -74,7 +74,10 @@ export default function Home() {
             className={styles.logo}
             alt="Boredgamers logo"
           />
-          <h1>BOREDGAMERS</h1>
+          <h1>
+            <span className={styles.titleLine1}>BORED</span>
+            <span className={styles.titleLine2}>GAMERS</span>
+          </h1>
           <div className={styles.joinButtons}>
             <button
               className={styles.button}
@@ -229,7 +232,7 @@ export default function Home() {
                   height={32}
                   alt="YouTube icon"
                 />
-                <span>56.8k</span>
+                <span>61.9K</span>
               </div>
               <div className={styles.number}>
                 <Image
@@ -238,7 +241,7 @@ export default function Home() {
                   height={32}
                   alt="Instagram icon"
                 />
-                <span>19.7k</span>
+                <span>19.5K</span>
               </div>
               <div className={styles.number}>
                 <Image
@@ -247,7 +250,7 @@ export default function Home() {
                   height={32}
                   alt="TikTok icon"
                 />
-                <span>60.4k</span>
+                <span>63.6K</span>
               </div>
             </div>
           </div>

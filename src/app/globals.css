@@ -5,6 +5,10 @@
   font-display: swap;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   background-color: black;
@@ -12,6 +16,8 @@ body {
   color: white;
   display: flex;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 
   align-items: center;
   flex-direction: column;
@@ -19,6 +25,10 @@ body {
   justify-content: center;
   font-size: 1.2em;
   scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
 }
 
 h1,
