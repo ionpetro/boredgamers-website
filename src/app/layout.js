@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   metadataBase: new URL("https://www.boredgamers.gr"),
@@ -95,7 +96,10 @@ export default function RootLayout({ children }) {
         />
         <link rel="canonical" href="https://www.boredgamers.gr" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
