@@ -106,16 +106,32 @@ test("next.config declares Vary: Accept for every negotiated path", async () => 
   }
 });
 
-test("negotiated responses opt out of caching", async () => {
+test("markdown variants opt out of caching", async () => {
   // Vary: Accept is overwritten by Vercel's edge on app-router responses, so
   // the cache-confusion guarantee rests on these responses not being cached.
   const { default: config } = await import("../next.config.js");
   const entries = await config.headers();
 
-  for (const entry of entries) {
+  for (const source of ["/index.md", "/about.md", "/contact.md", "/privacy.md"]) {
+    const entry = entries.find((e) => e.source === source);
+    assert.ok(entry, `no header rule for ${source}`);
     const cc = entry.headers.find((h) => h.key.toLowerCase() === "cache-control");
-    assert.ok(cc, `no Cache-Control rule for ${entry.source}`);
-    assert.match(cc.value, /no-store/, `${entry.source} is still cacheable`);
+    assert.ok(cc, `no Cache-Control rule for ${source}`);
+    assert.match(cc.value, /no-store/, `${source} is still cacheable`);
+  }
+});
+
+test("HTML pages keep normal caching", async () => {
+  // no-store on the pages visitors actually load would be a performance
+  // regression. Only the markdown representations opt out.
+  const { default: config } = await import("../next.config.js");
+  const entries = await config.headers();
+
+  for (const source of ["/", "/about", "/contact", "/privacy"]) {
+    const entry = entries.find((e) => e.source === source);
+    assert.ok(entry, `no header rule for ${source}`);
+    const cc = entry.headers.find((h) => h.key.toLowerCase() === "cache-control");
+    assert.equal(cc, undefined, `${source} must not be marked no-store`);
   }
 });
 
