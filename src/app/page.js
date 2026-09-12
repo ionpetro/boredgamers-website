@@ -435,74 +435,64 @@ export default function Home() {
       </div>
 
       {/* TEAM */}
-      <div
-        className={styles.teamLayout}
-        style={{
-          backgroundImage: "url('/images/teamback.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <section className={styles.team}>
-          <div className={styles.teamMain}>
-            {[
-              {
-                name: "@01001101_K",
-                image: "image00003.png",
-                hoverImage: "mike.png",
-                link: "https://www.instagram.com/01001101_k/",
-              },
-              {
-                name: "@JOHNBOURSI",
-                image: "image00002.png",
-                hoverImage: "john.png",
-                link: "https://www.instagram.com/johnboursi/",
-              },
-              {
-                name: "@VIKINGBAE",
-                image: "image00004.png",
-                hoverImage: "avi.png",
-                link: "https://www.instagram.com/vikingbae/",
-              },
-              {
-                name: "@PARASKEVYO",
-                image: "image00005.png",
-                hoverImage: "paraskevi.png",
-                link: "https://www.instagram.com/paraskevyo/",
-              },
-              {
-                name: "@DKARAGOUNIS89",
-                image: "image00006.png",
-                hoverImage: "dio.png",
-                link: "https://www.instagram.com/dkaragounis89/",
-              },
-            ].map((member, index) => (
-              <div key={index} className={styles.teamMember}>
-                <div className={styles.imageContainer}>
-                  <a href={member.link} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src={`/images/${member.image}`}
-                      width={220}
-                      height={300}
-                      alt={`Team member ${member.name}`}
-                      className={styles.defaultImage}
-                    />
-                    <Image
-                      src={`/images/${member.hoverImage}`}
-                      width={300}
-                      height={300}
-                      alt={`Hover image for ${member.name}`}
-                      className={styles.hoverImage}
-                    />
-                  </a>
-                </div>
-                <p className={styles.teamName}>{member.name}</p>
+      <section className={styles.team}>
+        <div className={styles.teamMain}>
+          {[
+            {
+              name: "@01001101_K",
+              image: "image00003.png",
+              hoverImage: "mike.png",
+              link: "https://www.instagram.com/01001101_k/",
+            },
+            {
+              name: "@JOHNBOURSI",
+              image: "image00002.png",
+              hoverImage: "john.png",
+              link: "https://www.instagram.com/johnboursi/",
+            },
+            {
+              name: "@VIKINGBAE",
+              image: "image00004.png",
+              hoverImage: "avi.png",
+              link: "https://www.instagram.com/vikingbae/",
+            },
+            {
+              name: "@PARASKEVYO",
+              image: "image00005.png",
+              hoverImage: "paraskevi.png",
+              link: "https://www.instagram.com/paraskevyo/",
+            },
+            {
+              name: "@DKARAGOUNIS89",
+              image: "image00006.png",
+              hoverImage: "dio.png",
+              link: "https://www.instagram.com/dkaragounis89/",
+            },
+          ].map((member, index) => (
+            <div key={index} className={styles.teamMember}>
+              <div className={styles.imageContainer}>
+                <a href={member.link} target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src={`/images/${member.image}`}
+                    width={220}
+                    height={300}
+                    alt={`Team member ${member.name}`}
+                    className={styles.defaultImage}
+                  />
+                  <Image
+                    src={`/images/${member.hoverImage}`}
+                    width={300}
+                    height={300}
+                    alt={`Hover image for ${member.name}`}
+                    className={styles.hoverImage}
+                  />
+                </a>
               </div>
-            ))}
-          </div>
-        </section>
-      </div>
+              <p className={styles.teamName}>{member.name}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* JOIN */}
       <div

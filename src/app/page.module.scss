@@ -716,24 +716,8 @@
   }
 }
 
-.teamLayout {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.72);
-    pointer-events: none;
-  }
-}
-
 .team {
   position: relative;
-  z-index: 5;
   padding: 64px 0;
   width: 800px;
   margin: auto;
