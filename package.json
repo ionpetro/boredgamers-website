@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "node --test test/*.test.js",
+    "verify:endpoints": "node scripts/verify-endpoints.mjs"
   },
   "dependencies": {
     "@motionone/utils": "^10.18.0",

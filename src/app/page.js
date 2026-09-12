@@ -418,7 +418,7 @@ export default function Home() {
         </section>
 
         <div className={styles.workWithUs}>
-          <h1>Want to work with us?</h1>
+          <h2>Want to work with us?</h2>
           <p>Shoot us a message and let's add you to this page.</p>
 
           <button
@@ -506,7 +506,7 @@ export default function Home() {
       >
         <img src="/images/paper.png" className={styles.paper} />
         <section className={styles.join}>
-          <h1>JOIN THE BOREDGAMERS</h1>
+          <h2>JOIN THE BOREDGAMERS</h2>
           <div className={styles.joinButtons}>
             <button
               className={styles.button}

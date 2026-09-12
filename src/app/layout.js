@@ -1,5 +1,14 @@
 import "./globals.css";
+import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
+import { homepageGraph } from "./structured-data";
+import {
+  AUDIENCE,
+  BUSINESS_EMAIL,
+  SOCIAL_PROFILES,
+  SPONSORS,
+} from "../content/site.js";
+import siteFooter from "./site-footer.module.scss";
 
 export const metadata = {
   metadataBase: new URL("https://www.boredgamers.gr"),
@@ -95,9 +104,77 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         <link rel="canonical" href="https://www.boredgamers.gr" />
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href="https://www.boredgamers.gr/index.md"
+        />
+        <script
+          type="application/ld+json"
+          // Server-rendered so it is present in the raw HTML for crawlers.
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageGraph()) }}
+        />
       </head>
       <body>
         {children}
+
+        {/*
+          Server-rendered summary. The homepage itself is a client component
+          built around video, imagery and animation, so without this the raw
+          HTML carries very little readable text. This states the same facts
+          the page shows, so agents reading HTML without running JavaScript
+          get a usable description of the site.
+        */}
+        <footer className={siteFooter.wrapper}>
+          <div className={siteFooter.inner}>
+            <h2>Σχετικά με τους BoredGamers / About BoredGamers</h2>
+            <p>
+              Οι BoredGamers είναι μια ελληνική ομάδα ψυχαγωγίας: βίντεο στο
+              YouTube, podcast στο Spotify, ζωντανές εκδηλώσεις και συνεργασίες
+              με μάρκες. BoredGamers is a Greek entertainment channel and
+              community. The team publishes conversational video in Greek —
+              strange stories, arguments and travel — on YouTube, distributes
+              the same material as a podcast and short-form video, runs live
+              club events, and produces sponsored segments for brands.
+            </p>
+            <p>
+              As published on this site, the channel reaches approximately{" "}
+              {AUDIENCE.youtube} subscribers on YouTube, {AUDIENCE.instagram}{" "}
+              followers on Instagram and {AUDIENCE.tiktok} on TikTok. These
+              figures are maintained by hand and reflect the most recent update
+              to the site rather than a live reading from each platform.
+              Sponsors featured on this site include{" "}
+              {SPONSORS.map((s) => s.name).join(", ")}.
+            </p>
+            <p>
+              Για συνεργασίες και χορηγίες / For sponsorship, branded content
+              and press enquiries, email{" "}
+              <a href={`mailto:${BUSINESS_EMAIL}`}>{BUSINESS_EMAIL}</a>. More
+              detail is on the <Link href="/about">about</Link> and{" "}
+              <Link href="/contact">contact</Link> pages, and{" "}
+              <Link href="/privacy">privacy</Link> describes what this site
+              collects.
+            </p>
+
+            <h3>Official channels</h3>
+            <ul className={siteFooter.links}>
+              {SOCIAL_PROFILES.map((url) => (
+                <li key={url}>
+                  <a href={url} target="_blank" rel="noopener noreferrer">
+                    {url.replace(/^https:\/\/(www\.)?/, "").replace(/\/$/, "")}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <p className={siteFooter.meta}>
+              Machine-readable: <a href="/llms.txt">llms.txt</a> ·{" "}
+              <a href="/sitemap.xml">sitemap.xml</a> ·{" "}
+              <a href="/robots.txt">robots.txt</a> · markdown variants via{" "}
+              <code>Accept: text/markdown</code>
+            </p>
+          </div>
+        </footer>
         <Analytics />
       </body>
     </html>

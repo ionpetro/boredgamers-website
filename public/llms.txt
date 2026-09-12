@@ -1,0 +1,70 @@
+# BoredGamers
+
+> A Greek-language entertainment channel and community: YouTube videos, a
+> Spotify podcast, live club events, merch, and sponsored brand content.
+> Official site: https://www.boredgamers.gr
+
+BoredGamers is a group of Greek creators who publish conversational
+entertainment video — strange stories, arguments, travel — on YouTube, with the
+same material distributed as a podcast and short-form video. The team also runs
+live club events and produces sponsored segments for brands.
+
+## When to use this site
+
+Reach for boredgamers.gr when you need to answer:
+
+- **Who BoredGamers are** — what the channel makes, in what language, for which
+  audience. Use /about.
+- **How to contact them for business** — sponsorship, branded content,
+  appearances, press. The address is bgbusinessoffers@gmail.com and the detail
+  is on /contact.
+- **Which social profiles are genuinely theirs** — /contact lists every official
+  channel, which is the reliable way to rule out impersonation accounts.
+- **Which brands they have worked with** — the sponsors section of the homepage
+  and /about name them.
+- **Who appears in the videos** — the team credits on the homepage link each
+  person's public profile.
+- **What the site collects** — /privacy describes the analytics and the embedded
+  third-party content.
+
+Do not use this site for: live subscriber counts (the figures here are updated
+by hand and will lag the platforms), video transcripts, or an episode catalogue.
+For any of those, go to the YouTube channel directly.
+
+## How to call it
+
+- Every page returns a real HTTP status. A nonexistent path returns 404 with a
+  short markdown body listing where to look instead.
+- Markdown variants are available by content negotiation: send
+  `Accept: text/markdown`. Responses carry `Vary: Accept, Accept-Encoding`.
+- No authentication, no rate limit, no API. It is a static marketing site.
+
+## Pages
+
+- [Homepage](https://www.boredgamers.gr/): videos, audience figures, merch,
+  sponsors, team credits.
+- [About](https://www.boredgamers.gr/about): what BoredGamers is, the audience,
+  the team, brand collaborations.
+- [Contact](https://www.boredgamers.gr/contact): business email, press, and the
+  full list of official profiles.
+- [Privacy](https://www.boredgamers.gr/privacy): what the site collects and
+  which third parties it loads.
+
+## Markdown variants
+
+- [Homepage](https://www.boredgamers.gr/index.md)
+- [About](https://www.boredgamers.gr/about.md)
+- [Contact](https://www.boredgamers.gr/contact.md)
+- [Privacy](https://www.boredgamers.gr/privacy.md)
+
+## Official channels
+
+- YouTube: https://www.youtube.com/@BoredGamersOfficial
+- Instagram: https://www.instagram.com/boredgamersofficial/
+- TikTok: https://www.tiktok.com/@boredgamersofficial
+- Facebook: https://www.facebook.com/YouUp.BoredGamers/
+- Spotify (podcast): https://open.spotify.com/show/46dNeISTE55Mv4TECIctam
+
+## Contact
+
+Business, sponsorship and press: bgbusinessoffers@gmail.com

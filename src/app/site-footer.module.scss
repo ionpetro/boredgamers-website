@@ -1,0 +1,68 @@
+/**
+ * Server-rendered site summary. Visually it reads as a quiet colophon at the
+ * foot of the page; its real job is to put the site's facts into the raw HTML
+ * for agents that do not execute JavaScript.
+ */
+.wrapper {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 56px 16px 72px;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.72);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.85rem;
+}
+
+.inner {
+  max-width: 760px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 14px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 28px 0 10px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  p {
+    line-height: 1.7;
+    margin: 0 0 12px;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+  }
+
+  code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+}
+
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  line-height: 1.8;
+}
+
+.meta {
+  margin-top: 28px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
