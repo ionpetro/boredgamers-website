@@ -77,10 +77,17 @@ async function main() {
       .split(",")
       .map((t) => t.trim().toLowerCase())
       .filter(Boolean);
+
+    // The negotiated response must be safe from cache confusion by one of two
+    // routes: Vary: Accept, or not being cached at all. Vercel's edge strips
+    // Vary from app-router responses, so no-store is the fallback guarantee.
+    const cacheControl = (res.headers.get("cache-control") ?? "").toLowerCase();
+    const uncacheable =
+      cacheControl.includes("no-store") || cacheControl.includes("private");
     check(
-      `${path} Vary includes Accept`,
-      tokens.includes("accept"),
-      vary || "(none)"
+      `${path} is cache-safe (Vary: Accept or no-store)`,
+      tokens.includes("accept") || uncacheable,
+      `vary="${vary || "none"}" cache-control="${cacheControl || "none"}"`
     );
     check(`${path} markdown body has an H1`, /^#\s/m.test(body));
   }

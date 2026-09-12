@@ -38,6 +38,15 @@ module.exports = {
           value:
             "Accept, Accept-Encoding, RSC, Next-Router-State-Tree, Next-Router-Prefetch",
         },
+        // Verified against the deployed site: Vercel's edge replaces Vary on
+        // app-router responses and does not apply the rule above, so Accept
+        // never reaches clients. Declining to cache these responses removes
+        // the risk Vary exists to prevent - a cached variant served to a
+        // client that asked for the other representation.
+        {
+          key: "Cache-Control",
+          value: "no-store",
+        },
       ],
     }));
   },

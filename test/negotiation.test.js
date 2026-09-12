@@ -106,6 +106,23 @@ test("next.config declares Vary: Accept for every negotiated path", async () => 
   }
 });
 
+test("negotiated responses opt out of caching", async () => {
+  // Vary: Accept is overwritten by Vercel's edge on app-router responses, so
+  // the cache-confusion guarantee rests on these responses not being cached.
+  const { default: config } = await import("../next.config.js");
+  const entries = await config.headers();
+
+  for (const entry of entries) {
+    const cc = entry.headers.find((h) => h.key.toLowerCase() === "cache-control");
+    assert.ok(cc, `no Cache-Control rule for ${entry.source}`);
+    assert.match(cc.value, /no-store/, `${entry.source} is still cacheable`);
+  }
+});
+
+test("middleware marks the rewritten response uncacheable", () => {
+  assert.match(source, /set\("Cache-Control",\s*"no-store"\)/);
+});
+
 test("config Vary keeps the router values Next relies on", async () => {
   // Overriding Vary must not drop RSC/Next-Router-*, or client-side
   // navigation can be served the wrong cached payload.

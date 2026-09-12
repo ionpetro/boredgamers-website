@@ -7,6 +7,11 @@ export function GET() {
   return new Response(toMarkdown(PRIVACY, { canonical: `${SITE_URL}/privacy` }), {
     headers: {
       "Content-Type": "text/markdown; charset=utf-8",
+      // Vercel's edge replaces Vary on app-router responses and ignores
+      // next.config.js header rules for it, so Vary: Accept cannot be made
+      // to stick. Opting out of caching removes the risk that header exists
+      // to prevent: an uncached response cannot be served to the wrong client.
+      "Cache-Control": "no-store",
       Vary: "Accept, Accept-Encoding",
       Link: `<${SITE_URL}/privacy>; rel="canonical"`,
     },

@@ -61,6 +61,11 @@ export function middleware(request) {
     url.pathname = target;
     const response = NextResponse.rewrite(url);
     response.headers.set("Vary", "Accept, Accept-Encoding");
+    // Vercel's edge overwrites Vary on app-router responses and ignores the
+    // next.config.js rule for it, so Vary: Accept cannot be relied on here.
+    // Not caching the negotiated response removes the failure Vary guards
+    // against: a cached markdown variant handed to a client wanting HTML.
+    response.headers.set("Cache-Control", "no-store");
     return response;
   }
 
