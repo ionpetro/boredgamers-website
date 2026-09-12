@@ -79,6 +79,47 @@ test("middleware always sets Vary: Accept on negotiated paths", () => {
   }
 });
 
+test("next.config declares Vary: Accept for every negotiated path", async () => {
+  // The middleware/route-handler Vary is overwritten by Next's own router
+  // Vary before the response leaves the edge. Only headers declared in
+  // next.config.js survive, so that is where the real guarantee lives.
+  const { default: config } = await import("../next.config.js");
+  const entries = await config.headers();
+
+  const negotiated = [
+    "/",
+    "/about",
+    "/contact",
+    "/privacy",
+    "/index.md",
+    "/about.md",
+    "/contact.md",
+    "/privacy.md",
+  ];
+
+  for (const path of negotiated) {
+    const entry = entries.find((e) => e.source === path);
+    assert.ok(entry, `no header rule for ${path}`);
+    const vary = entry.headers.find((h) => h.key.toLowerCase() === "vary");
+    assert.ok(vary, `no Vary header for ${path}`);
+    assert.match(vary.value, /\bAccept\b/, `Vary for ${path} omits Accept`);
+  }
+});
+
+test("config Vary keeps the router values Next relies on", async () => {
+  // Overriding Vary must not drop RSC/Next-Router-*, or client-side
+  // navigation can be served the wrong cached payload.
+  const { default: config } = await import("../next.config.js");
+  const entries = await config.headers();
+
+  for (const entry of entries) {
+    const vary = entry.headers.find((h) => h.key.toLowerCase() === "vary");
+    assert.match(vary.value, /RSC/);
+    assert.match(vary.value, /Next-Router-State-Tree/);
+    assert.match(vary.value, /Next-Router-Prefetch/);
+  }
+});
+
 test("middleware matcher covers every negotiated path", () => {
   for (const path of ["/", "/about", "/contact", "/privacy"]) {
     assert.ok(

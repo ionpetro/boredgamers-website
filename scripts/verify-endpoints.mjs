@@ -65,10 +65,23 @@ async function main() {
       headers: { Accept: "text/markdown" },
     });
     const ctype = res.headers.get("content-type") ?? "";
-    const vary = res.headers.get("vary") ?? "";
     const body = await res.text();
     check(`${path} serves text/markdown`, ctype.includes("text/markdown"), ctype);
-    check(`${path} Vary includes Accept`, /accept/i.test(vary), vary || "(none)");
+
+    // A response may carry several Vary lines; the effective value is their
+    // union. getSetCookie-style access is not available for Vary, but fetch
+    // joins repeated headers with ", " so splitting on commas covers both the
+    // single-header and repeated-header cases.
+    const vary = res.headers.get("vary") ?? "";
+    const tokens = vary
+      .split(",")
+      .map((t) => t.trim().toLowerCase())
+      .filter(Boolean);
+    check(
+      `${path} Vary includes Accept`,
+      tokens.includes("accept"),
+      vary || "(none)"
+    );
     check(`${path} markdown body has an H1`, /^#\s/m.test(body));
   }
   const htmlRes = await fetch(`${BASE}/`, { headers: { Accept: "text/html" } });
