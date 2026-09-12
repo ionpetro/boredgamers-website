@@ -344,7 +344,7 @@ export default function Home() {
               <p>Entertain and connect generations of fans</p>
               <iframe
                 className={styles.video}
-                src="https://www.youtube.com/embed/Aq14ZW5iGH0?si=kNaF2_aPWivpBUwf"
+                src="https://www.youtube.com/embed/ur9frKlg5-8"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -360,7 +360,7 @@ export default function Home() {
 
               <iframe
                 className={styles.video}
-                src="https://www.youtube.com/embed/LesPE5esyIE?si=0d3_XYytG_b-Recq"
+                src="https://www.youtube.com/embed/AIhcmyh8a5Q"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -376,7 +376,7 @@ export default function Home() {
 
               <iframe
                 className={styles.video}
-                src="https://www.youtube.com/embed/fOfiiF-hEss?si=SlOLBMNCdmCRl8Q_"
+                src="https://www.youtube.com/embed/5ve1r8dv79g"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -392,7 +392,23 @@ export default function Home() {
 
               <iframe
                 className={styles.video}
-                src="https://www.youtube.com/embed/6I439jTP6jA?si=v4ztYhdkyGwM_Tse"
+                src="https://www.youtube.com/embed/ecFlEPsbu7s"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            <div className={styles.sponsor}>
+              <div className={styles.sponsorHead}>
+                <img src="/images/strengthshop.png" width={80} height={80} />
+                <h2>STRENGTH SHOP</h2>
+              </div>
+              <p>Εξοπλισμός δύναμης για κάθε προπόνηση.</p>
+
+              <iframe
+                className={styles.video}
+                src="https://www.youtube.com/embed/GtZS5X146Uw"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -419,70 +435,74 @@ export default function Home() {
       </div>
 
       {/* TEAM */}
-      <section className={styles.team}>
-        <div className={styles.teamMain}>
-          {[
-            {
-              name: "@01001101_K",
-              image: "image00003.png",
-              hoverImage: "mike.png",
-              link: "https://www.instagram.com/01001101_k/",
-            },
-            {
-              name: "@JOHNBOURSI",
-              image: "image00002.png",
-              hoverImage: "john.png",
-              link: "https://www.instagram.com/johnboursi/",
-            },
-            {
-              name: "@CS.SAKELLARIOU",
-              image: "image00001.png",
-              hoverImage: "chris.png",
-              link: "https://www.instagram.com/cs.sakellariou/",
-            },
-            {
-              name: "@VIKINGBAE",
-              image: "image00004.png",
-              hoverImage: "avi.png",
-              link: "https://www.instagram.com/vikingbae/",
-            },
-            {
-              name: "@PARASKEVYO",
-              image: "image00005.png",
-              hoverImage: "paraskevi.png",
-              link: "https://www.instagram.com/paraskevyo/",
-            },
-            {
-              name: "@DKARAGOUNIS89",
-              image: "image00006.png",
-              hoverImage: "dio.png",
-              link: "https://www.instagram.com/dkaragounis89/",
-            },
-          ].map((member, index) => (
-            <div key={index} className={styles.teamMember}>
-              <div className={styles.imageContainer}>
-                <a href={member.link} target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src={`/images/${member.image}`}
-                    width={220}
-                    height={300}
-                    alt={`Team member ${member.name}`}
-                    className={styles.defaultImage}
-                  />
-                  <Image
-                    src={`/images/${member.hoverImage}`}
-                    width={300}
-                    height={300}
-                    alt={`Hover image for ${member.name}`}
-                    className={styles.hoverImage}
-                  />
-                </a>
+      <div
+        className={styles.teamLayout}
+        style={{
+          backgroundImage: "url('/images/teamback.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <section className={styles.team}>
+          <div className={styles.teamMain}>
+            {[
+              {
+                name: "@01001101_K",
+                image: "image00003.png",
+                hoverImage: "mike.png",
+                link: "https://www.instagram.com/01001101_k/",
+              },
+              {
+                name: "@JOHNBOURSI",
+                image: "image00002.png",
+                hoverImage: "john.png",
+                link: "https://www.instagram.com/johnboursi/",
+              },
+              {
+                name: "@VIKINGBAE",
+                image: "image00004.png",
+                hoverImage: "avi.png",
+                link: "https://www.instagram.com/vikingbae/",
+              },
+              {
+                name: "@PARASKEVYO",
+                image: "image00005.png",
+                hoverImage: "paraskevi.png",
+                link: "https://www.instagram.com/paraskevyo/",
+              },
+              {
+                name: "@DKARAGOUNIS89",
+                image: "image00006.png",
+                hoverImage: "dio.png",
+                link: "https://www.instagram.com/dkaragounis89/",
+              },
+            ].map((member, index) => (
+              <div key={index} className={styles.teamMember}>
+                <div className={styles.imageContainer}>
+                  <a href={member.link} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src={`/images/${member.image}`}
+                      width={220}
+                      height={300}
+                      alt={`Team member ${member.name}`}
+                      className={styles.defaultImage}
+                    />
+                    <Image
+                      src={`/images/${member.hoverImage}`}
+                      width={300}
+                      height={300}
+                      alt={`Hover image for ${member.name}`}
+                      className={styles.hoverImage}
+                    />
+                  </a>
+                </div>
+                <p className={styles.teamName}>{member.name}</p>
               </div>
-              <p className={styles.teamName}>{member.name}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      </div>
 
       {/* JOIN */}
       <div
