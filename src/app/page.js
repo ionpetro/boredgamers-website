@@ -59,11 +59,15 @@ export default function Home() {
           loop
           muted
           playsInline
+          // The poster carries the hero on its own, so the video is not worth
+          // competing with first paint for bandwidth. It loads once the page is
+          // interactive, then fades in.
+          preload="none"
           className={styles.backgroundVideo}
-          style={{ filter: "grayscale(100%)", opacity: "0.2" }}
-          poster="/images/video-poster.png"
+          style={{ opacity: "0.2" }}
+          poster="/images/video-poster.jpg"
         >
-          <source src="/images/background.mov" type="video/quicktime" />
+          <source src="/images/background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className={styles.mainHead}>
@@ -287,7 +291,7 @@ export default function Home() {
               alt="Limited edition socks"
             />
             <h3>ΚΑΛΤΣΕΣ LIMITED</h3>
-            <a className={`${styles.button}`}>BUY NOW</a>
+            <a className={`${styles.button} ${styles.disabled}`}>SOLD OUT</a>
           </div>
           <div className={styles.product}>
             <Image
