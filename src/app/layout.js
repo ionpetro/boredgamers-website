@@ -43,9 +43,12 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
+  // These are fetched directly by the browser, bypassing next/image, so they
+  // must be pre-sized. Pointing them at the 1475x1066 source meant every
+  // visitor downloaded 382KB for a 32px tab icon.
   icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: "/images/favicon.ico",
+    apple: "/images/apple-touch-icon.png",
   },
   openGraph: {
     title: "BoredGamers - Entertainment and Gaming Community",
