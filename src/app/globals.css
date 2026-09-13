@@ -1,6 +1,10 @@
 @font-face {
   font-family: 'Gagalin';
-  src: url('/fonts/Gagalin-Regular.otf') format('woff2');
+  /* The format() hint has to match the actual bytes. This previously claimed
+     woff2 while serving an OpenType file, so browsers fetched all 245KB, found
+     OTF data, judged the face unsupported and discarded it - every heading
+     silently fell back to a system sans. */
+  src: url('/fonts/Gagalin-Regular.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
 }

@@ -91,9 +91,9 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#000000" />
         <link
           rel="preload"
-          href="/fonts/Gagalin-Regular.otf"
+          href="/fonts/Gagalin-Regular.woff2"
           as="font"
-          type="font/otf"
+          type="font/woff2"
           crossOrigin="anonymous"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -102,8 +102,15 @@ export default function RootLayout({ children }) {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
+        {/*
+          One variable font per subset rather than four static instances, and
+          no italic axis: the only italic on the site is a single <em> in the
+          footer credit, which a synthesised oblique covers. Requesting
+          ital,wght@0,100..900;1,100..900 pulled ~415KB of font files; the
+          range form pulls ~104KB for the same weights.
+        */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
           rel="stylesheet"
         />
         <link rel="canonical" href="https://www.boredgamers.gr" />
